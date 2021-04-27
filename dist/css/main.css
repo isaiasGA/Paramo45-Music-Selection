@@ -121,8 +121,8 @@ img {
 
 .top-header .menu-btn {
   position: absolute;
-  top: 10rem;
-  right: 10rem;
+  top: 19rem;
+  right: 30rem;
   z-index: 1;
   height: 20rem;
   width: 28rem;
@@ -157,6 +157,105 @@ img {
   height: 5rem;
   width: 25;
   background-color: black;
+}
+
+.top-header .menu-btn .burger-btn.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.top-header .menu-btn .burger-btn.open::before {
+  background: #fff;
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+}
+
+.top-header .menu-btn .burger-btn.open::after {
+  background: #fff;
+  width: 34rem;
+  -webkit-transform: rotate(-45deg) translate(8px, -9px);
+          transform: rotate(-45deg) translate(8px, -9px);
+}
+
+.top-header .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  visibility: hidden;
+}
+
+.top-header .navigation.open {
+  visibility: visible;
+}
+
+.top-header .navigation .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #272727;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-header .navigation .nav-menu.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.top-header .navigation .nav-menu__item {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-header .navigation .nav-menu__item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.top-header .navigation .nav-menu .link {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28rem;
+  text-transform: uppercase;
+  padding: 2em 0;
+  font-weight: 300;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-header .nav-menu__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.top-header .nav-menu__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.top-header .nav-menu__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
 }
 
 header {
