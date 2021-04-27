@@ -1,0 +1,26 @@
+.music-showcase-section {
+  margin: 21rem 0;
+
+  .music-menu {
+    height: 67rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13rem;
+
+    .music-genre {
+      cursor: pointer;
+      @include musicMenuFont;
+
+      .music-logos {
+        width: 22rem;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+      }
+    }
+  }
+  .music-display {
+    width: 90vw;
+    height: 64vh;
+    background-color: black;
+  }
+}

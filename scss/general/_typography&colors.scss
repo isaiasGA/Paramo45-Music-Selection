@@ -1,20 +1,18 @@
 /*Typography styles*/
 
 //Header
-@mixin navigationFont() {
-  font-family: 'Montserrat', sans-serif;
-}
 
-@mixin headerTitleSettings($size, $weight, $style) {
+@mixin headerTitleSettings($size, $weight) {
   font-size: $size;
   font-weight: $weight;
-  font-style: $style;
+  font-family: 'Dancing Script', cursive;
 }
 
 
-@mixin mainTitleFont() {
+@mixin mainTitleFont($size, $style) {
   font-family: 'Cormorant', serif;
-  font-weight: 500 italic;
+  font-size: $size;
+  font-style: $style;
 }
 
 @mixin musicMenuFont() {
