@@ -1,0 +1,34 @@
+/*Typography styles*/
+
+//Header
+@mixin navigationFont() {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin headerTitleSettings($size, $weight, $style) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+
+@mixin mainTitleFont() {
+  font-family: 'Cormorant', serif;
+  font-weight: 500 italic;
+}
+
+@mixin musicMenuFont() {
+  font-family: 'Neuton', serif;
+  font-weight: 200;
+}
+
+@mixin headerFont() {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+}
+
+@mixin paragraphsFont() {
+  font-family: 'Spectral', serif;
+  font-weight: 300;
+}
+

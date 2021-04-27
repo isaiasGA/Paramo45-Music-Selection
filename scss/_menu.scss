@@ -1,0 +1,67 @@
+  @mixin transition-menu {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+
+    .menu-logo-container {
+      display: flex;
+      flex-direction: column;
+      border: 7px solid;
+      margin-left: .5em;
+      margin-top: .5em;
+      width: 111rem;
+      height: 106rem;
+
+      .airpods-img {
+        width: 3em;
+        margin: .5em 0 .5em 1.7em;
+      }
+
+      h2 {
+        margin-left: .5em;
+        @include headerTitleSettings(16rem, bold, italic)
+      }
+    }
+
+    .menu-btn {
+      position: absolute;
+      top: 10rem;
+      right: 10rem;
+      z-index: 1;
+      height: 20rem;
+      width: 28rem;
+      cursor: pointer;
+      @include transition-menu();
+
+        .burger-btn {
+          position: absolute;
+          top: 10rem;
+          height: 5rem;
+          width: 30rem;
+          background-color: black;
+          @include transition-menu();
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -10rem;
+            height: 5rem;
+            width: 34rem;
+            background-color: black;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 10rem;
+            height: 5rem;
+            width: 25;
+            background-color: black;
+
+          }
+        }      
+    }
+  }
