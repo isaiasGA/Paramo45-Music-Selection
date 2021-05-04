@@ -21,14 +21,29 @@ const getSpotToken = async () => {
   }
 };
 
-function displayIds(idsArr) {
-  const singleIdString = idsArr.join(',');
-  const paraDisplay = document.querySelector('.tracks');
-  paraDisplay.textContent = singleIdString
+const getSpotifyTracks = async (idsArr) => {
+  const access_token = await getSpotToken();
+  const singleIdString = await idsArr.join(',');
+
+  try {
+    const config = {
+      headers: {
+        "Authorization": 'Bearer ' + access_token,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      params: { ids: singleIdString }
+    }
+    const fetchTracks = await axios.get('https://api.spotify.com/v1/tracks', config);
+    return fetchTracks.data.tracks
+
+  } catch (error) {
+    console.log(error)
+  }
+
 }
 
-getTracksData().then((ids) => {
-  displayIds(ids)
+export const tracksData = () => getTracksData().then((ids) => {
+  return getSpotifyTracks(ids)
 })
 
 
