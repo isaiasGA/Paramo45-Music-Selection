@@ -19,3 +19,186 @@
     }
   }
 }
+
+.track-display {
+
+  .album-container {
+    transition-duration: 1.5s;
+    transition-property: all;
+    transition-timing-function:cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(312px);
+    z-index: 1;
+  
+    .album-animation {
+      transform: translateY(0);
+    }
+  
+    .album-cover {
+      transition-duration: 2s;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    
+      .spinning-cover {
+        border-radius: 50%;
+        animation-name: spinning-album;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: both;
+      
+        transition-duration: 2s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        width: 73vw;
+        height: 37vh;
+        object-fit: fill;
+        margin: 9% 0 11% 8%;
+      }
+      
+      @keyframes spinning-album {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+  
+      .paused-album-cover {
+        transition-duration: 0.5s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 50%;
+        width: 73vw;
+        height: 37vh;
+        object-fit: fill;
+        margin: 9% 0 11% 8%;
+      }
+      
+    }
+  }
+
+  .track-information {
+    height: 32vh;
+
+    .track-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 52%;
+      align-items: center;
+    }
+
+    .track-controls {
+      position: relative;
+      bottom: 25%;
+      left: -4%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      align-content: space-between;
+
+      #playBtn {
+        right: 128px;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: pink;
+        cursor: pointer;
+        transition: all 70ms;
+        top: 26px;
+
+        .fa-play {
+          position: relative;
+          top: 32%;
+          left: 36%;
+          font-size: 120%;
+          color: white;
+        }
+
+        .fa-pause {
+          position: relative;
+          top: 32%;
+          left: 31%;
+          font-size: 120%;
+          color: white;
+        }
+      } 
+
+      .volume-control {
+        display: flex;
+        position: relative;
+        top: 37px;
+        right: -16px;
+
+        .volume-logo {
+          margin-right: 8%;
+        }
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 170%;
+      }
+
+      input[type="range"]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+      
+        /* Hides the slider so custom styles can be added */
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+        background: pink;
+        border-radius: 0;
+        border: 0px solid #000101;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: #fc246c;
+        cursor: pointer;
+        margin-top: -7px;
+      }
+
+      input[type="range"]::-moz-range-track {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+        background: red;
+        border-radius: 0;
+        border: 0px solid #000101;
+      } 
+
+      input[type="range"]::-ms-track {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        border-width: 39px 0;
+        color: transparent;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

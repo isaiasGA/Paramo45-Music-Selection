@@ -299,4 +299,229 @@ header .title {
   margin: 0 auto;
   padding-bottom: 5rem;
 }
+
+.track-display .album-container {
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transform: translateY(312px);
+          transform: translateY(312px);
+  z-index: 1;
+}
+
+.track-display .album-container .album-animation {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.track-display .album-container .album-cover {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.track-display .album-container .album-cover .spinning-cover {
+  border-radius: 50%;
+  -webkit-animation-name: spinning-album;
+          animation-name: spinning-album;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  width: 73vw;
+  height: 37vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin: 9% 0 11% 8%;
+}
+
+@-webkit-keyframes spinning-album {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning-album {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.track-display .album-container .album-cover .paused-album-cover {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 50%;
+  width: 73vw;
+  height: 37vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin: 9% 0 11% 8%;
+}
+
+.track-display .track-information {
+  height: 32vh;
+}
+
+.track-display .track-information .track-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 52%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.track-display .track-information .track-controls {
+  position: relative;
+  bottom: 25%;
+  left: -4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.track-display .track-information .track-controls #playBtn {
+  right: 128px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: pink;
+  cursor: pointer;
+  -webkit-transition: all 70ms;
+  transition: all 70ms;
+  top: 26px;
+}
+
+.track-display .track-information .track-controls #playBtn .fa-play {
+  position: relative;
+  top: 32%;
+  left: 36%;
+  font-size: 120%;
+  color: white;
+}
+
+.track-display .track-information .track-controls #playBtn .fa-pause {
+  position: relative;
+  top: 32%;
+  left: 31%;
+  font-size: 120%;
+  color: white;
+}
+
+.track-display .track-information .track-controls .volume-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 37px;
+  right: -16px;
+}
+
+.track-display .track-information .track-controls .volume-control .volume-logo {
+  margin-right: 8%;
+}
+
+.track-display .track-information .track-controls input[type="range"] {
+  -webkit-appearance: none;
+  width: 170%;
+}
+
+.track-display .track-information .track-controls input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.track-display .track-information .track-controls input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+          box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+  background: pink;
+  border-radius: 0;
+  border: 0px solid #000101;
+}
+
+.track-display .track-information .track-controls input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+          box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #fc246c;
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+.track-display .track-information .track-controls input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
+  background: red;
+  border-radius: 0;
+  border: 0px solid #000101;
+}
+
+.track-display .track-information .track-controls input[type="range"]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent;
+  padding-top: 5px;
+}
 /*# sourceMappingURL=main.css.map */
