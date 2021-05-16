@@ -1,18 +1,18 @@
 const musicDisplayContainer = document.querySelector('.music-display');
 
 export const trackComponents = (trackInfo) => {
-  console.log(trackInfo)
 
   function trackContainer(num, genre, audioLink) {
     let trackContainer = document.createElement('div');
+    trackContainer.classList.add('trackContainer', `container-${num}`, `${genre}`)
 
     trackContainer.innerHTML = ` 
-      <div class="track ${genre}">
+      <div class="track">
         <div class="track-display">
           <div class="album-container">
-            <img class='album-cover' src=${trackInfo[num].album.images[0].url} alt="music-albums">
+            <img class=' album-cover album-cover-${num}' src=${trackInfo[num].album.images[0].url} alt="music-albums">
           </div>
-          <div class="track-information">
+          <div class="track-information trackInfo-${num}">
             <ul class="track-info">
               <li class="track-name">${trackInfo[num].name}</li>
               <li class="artist">${trackInfo[num].artists[0].name}</li>

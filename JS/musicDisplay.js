@@ -10,14 +10,46 @@ import { trackComponents } from './trackComponents.js'
 
   /*====================================================================================*/
 
+
   function trackDataLogic(num) {
+    const trackContainer = document.querySelectorAll('.trackContainer')
+    const trackContainerNum = document.querySelector(`.container-${num}`)
     const audioElement = document.querySelector(`.audio-${num} `);
     const seekBarInput = document.querySelector(`.seekbar-${num}`);
     const volumeInput = document.querySelector(`.volume-input-${num}`);
     const playBtn = document.querySelector(`.btn-${num}`);
     const audio = document.querySelector(`.audio-${num}`);
     const trackDuration = document.querySelector(`.track-duration-${num}`);
+    const albumCover = document.querySelector(`.album-cover-${num}`);
+    const trackInformation = document.querySelector(`.trackInfo-${num}`);
 
+    const edmBtn = document.querySelector('.edm');
+    const latinBtn = document.querySelector('.latin');
+    const altBtn = document.querySelector('.alternative');
+    const instBtn = document.querySelector('.instrumental');
+    const popBtn = document.querySelector('.pop');
+    const allBtn = document.querySelector('.all');
+
+    allBtn.addEventListener('click', () => {
+      trackContainer.forEach(genre => {
+        if (genre.classList[3] === 'hideGenres') {
+          genre.classList.remove('hideGenres');
+        }
+      });
+    })
+
+
+    albumCover.addEventListener('click', () => {
+      trackContainerNum.classList.remove('playingMediaHeight')
+      trackInformation.classList.toggle('animation-start');
+      trackContainerNum.classList.toggle('removeHeight');
+      albumCover.classList.remove('spinning-cover');
+      albumCover.classList.remove('paused-album-cover');
+      playBtn.children[0].classList.remove('fa-pause');
+      playBtn.children[0].classList.add('fa-play');
+      audioElement.pause();
+      audioElement.currentTime = 0;
+    });
 
     const btnLogic = () => {
       playBtn.addEventListener('click', () => {
@@ -25,8 +57,14 @@ import { trackComponents } from './trackComponents.js'
         playBtn.children[0].classList.toggle('fa-pause');
         if (audio.paused) {
           audio.play();
+          trackContainerNum.classList.add('playingMediaHeight')
+          albumCover.classList.add('spinning-cover');
+          albumCover.classList.remove('paused-album-cover');
         } else {
           audio.pause();
+          trackContainerNum.classList.remove('playingMediaHeight')
+          albumCover.classList.remove('spinning-cover');
+          albumCover.classList.add('paused-album-cover');
         };
       });
     };
@@ -38,10 +76,14 @@ import { trackComponents } from './trackComponents.js'
         trackDuration.innerHTML = minutes + ':' + seconds;
       }, false)
 
-      if (audioElement.ended) {
-        playBtn.classList.remove('fa-pause');
-        playBtn.classList.add('fa-play');
-      };
+      audioElement.addEventListener('ended', () => {
+        playBtn.children[0].classList.add('fa-play');
+        playBtn.children[0].classList.remove('fa-pause');
+        albumCover.classList.remove('spinning-cover');
+        albumCover.classList.add('paused-album-cover');
+        trackContainerNum.classList.remove('playingMediaHeight')
+        audioElement.currentTime = 0;
+      })
 
       audioElement.addEventListener('timeupdate', () => {
         seekBarInput.value = audioElement.currentTime
@@ -66,10 +108,39 @@ import { trackComponents } from './trackComponents.js'
       });
     }
 
+    function trackGenresLogic(btn, gen) {
+      btn.addEventListener('click', () => {
+        trackContainer.forEach(genre => {
+          if (genre.classList[2] !== gen) {
+            genre.classList.add('hideGenres');
+            trackContainerNum.classList.remove('playingMediaHeight')
+            trackInformation.classList.remove('animation-start');
+            trackContainerNum.classList.remove('removeHeight');
+            albumCover.classList.remove('spinning-cover');
+            albumCover.classList.remove('paused-album-cover');
+            playBtn.children[0].classList.remove('fa-pause');
+            playBtn.children[0].classList.add('fa-play');
+            audioElement.pause();
+            audioElement.currentTime = 0;
+          } else {
+            genre.classList.remove('hideGenres')
+          }
+        });
+      });
+    }
+
+
     btnLogic();
     audioElementLogic();
     seekBarLogic();
     volumeControlLogic();
+
+    trackGenresLogic(latinBtn, 'latin');
+    trackGenresLogic(altBtn, 'alternative');
+    trackGenresLogic(instBtn, 'instrumental');
+    trackGenresLogic(popBtn, 'pop');
+    trackGenresLogic(edmBtn, 'edm');
+
   }
 
   trackDataLogic(0)

@@ -83,6 +83,10 @@ img {
   margin: 0 auto;
 }
 
+.hideMainContent {
+  display: none;
+}
+
 header {
   background-image: url("https://images.unsplash.com/photo-1445375011782-2384686778a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80");
   background-position: center;
@@ -300,8 +304,8 @@ header .title {
   padding-bottom: 5rem;
 }
 
-.track-information {
-  height: 32vh;
+.trackContainer {
+  height: 44vh;
   -webkit-transition-duration: 1.5s;
           transition-duration: 1.5s;
   -webkit-transition-property: all;
@@ -310,7 +314,136 @@ header .title {
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.hideGenres {
+  display: none;
+  height: 0;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.removeHeight {
+  height: 69vh;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.playingMediaHeight {
+  height: 61vh;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.album-container {
+  background-color: #464646;
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.album-cover {
+  width: 100%;
+  height: 42vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spinning-cover {
+  border-radius: 50%;
+  -webkit-animation-name: spinning-album;
+          animation-name: spinning-album;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  width: 70%;
+  padding: 4% 0;
+  margin-left: 14%;
+  position: relative;
+  top: 7px;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+@-webkit-keyframes spinning-album {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning-album {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.paused-album-cover {
+  border-radius: 50%;
+  width: 100%;
+  padding: 4%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.track-information {
+  height: 26vh;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transform: translateY(-213px);
+          transform: translateY(-213px);
+  background-color: #464646;
+}
+
+.animation-start {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .track-info {
+  color: #fff;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,12 +482,12 @@ header .title {
 }
 
 .play-btn {
-  right: 128px;
+  right: 112px;
   position: relative;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: pink;
+  background-color: #fff;
   cursor: pointer;
   -webkit-transition: all 70ms;
   transition: all 70ms;
@@ -364,9 +497,9 @@ header .title {
 .fa-play {
   position: relative;
   top: 32%;
-  left: 36%;
+  left: 37%;
   font-size: 120%;
-  color: white;
+  color: #464646;
 }
 
 .fa-pause {
@@ -374,20 +507,24 @@ header .title {
   top: 32%;
   left: 31%;
   font-size: 120%;
-  color: white;
+  color: #464646;
 }
 
 .volume-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   top: 37px;
   right: -16px;
+  width: 20%;
+}
+
+.fa-volume-up {
+  position: relative;
+  left: -29px;
+  top: 10px;
 }
 
 .volume-logo {
-  margin-right: 8%;
+  color: #fff;
 }
 
 input[type="range"] {
@@ -398,7 +535,6 @@ input[type="range"] {
 input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
-  /* Hides the slider so custom styles can be added */
   background: transparent;
   border-color: transparent;
   color: transparent;
@@ -406,11 +542,11 @@ input[type="range"]::-ms-track {
 
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 5px;
+  height: 3px;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
           box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
-  background: pink;
+  background: #fff;
   border-radius: 0;
   border: 0px solid #000101;
 }
@@ -423,7 +559,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  background: #fc246c;
+  background: #DCDCDC;
   cursor: pointer;
   margin-top: -7px;
 }
@@ -433,7 +569,7 @@ input[type="range"]::-moz-range-track {
   height: 3px;
   cursor: pointer;
   box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
-  background: red;
+  background: #fff;
   border-radius: 0;
   border: 0px solid #000101;
 }
