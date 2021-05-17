@@ -1,4 +1,3 @@
-/*Typography styles*/
 /****** Elad Shechter's RESET *******/
 /*** box sizing border-box for all elements ***/
 *,
@@ -325,10 +324,10 @@ header .title {
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.removeHeight {
-  height: 69vh;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+.pausedMediaHeight {
+  height: 72vh;
+  -webkit-transition-duration: 1.8s;
+          transition-duration: 1.8s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -336,7 +335,7 @@ header .title {
 }
 
 .playingMediaHeight {
-  height: 61vh;
+  height: 64vh;
   -webkit-transition-duration: 1.5s;
           transition-duration: 1.5s;
   -webkit-transition-property: all;
@@ -431,8 +430,8 @@ header .title {
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  -webkit-transform: translateY(-213px);
-          transform: translateY(-213px);
+  -webkit-transform: translateY(-231px);
+          transform: translateY(-231px);
   background-color: #464646;
 }
 
@@ -482,8 +481,9 @@ header .title {
 }
 
 .play-btn {
-  right: 112px;
   position: relative;
+  top: 26px;
+  right: 112px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -491,7 +491,6 @@ header .title {
   cursor: pointer;
   -webkit-transition: all 70ms;
   transition: all 70ms;
-  top: 26px;
 }
 
 .fa-play {
@@ -512,15 +511,15 @@ header .title {
 
 .volume-control {
   position: relative;
-  top: 37px;
+  top: 20px;
   right: -16px;
   width: 20%;
 }
 
 .fa-volume-up {
   position: relative;
-  left: -29px;
   top: 10px;
+  left: -29px;
 }
 
 .volume-logo {
@@ -546,7 +545,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
           box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent;
-  background: #fff;
+  background: white;
   border-radius: 0;
   border: 0px solid #000101;
 }
@@ -559,7 +558,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  background: #DCDCDC;
+  background: #fff;
   cursor: pointer;
   margin-top: -7px;
 }

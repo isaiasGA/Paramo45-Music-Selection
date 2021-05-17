@@ -1,6 +1,7 @@
-/*Typography styles*/
 
-//Header
+
+$black: #464646;
+$white: #fff;
 
 @mixin headerTitleSettings($size, $weight) {
   font-size: $size;

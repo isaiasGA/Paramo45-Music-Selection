@@ -30,27 +30,6 @@ import { trackComponents } from './trackComponents.js'
     const popBtn = document.querySelector('.pop');
     const allBtn = document.querySelector('.all');
 
-    allBtn.addEventListener('click', () => {
-      trackContainer.forEach(genre => {
-        if (genre.classList[3] === 'hideGenres') {
-          genre.classList.remove('hideGenres');
-        }
-      });
-    })
-
-
-    albumCover.addEventListener('click', () => {
-      trackContainerNum.classList.remove('playingMediaHeight')
-      trackInformation.classList.toggle('animation-start');
-      trackContainerNum.classList.toggle('removeHeight');
-      albumCover.classList.remove('spinning-cover');
-      albumCover.classList.remove('paused-album-cover');
-      playBtn.children[0].classList.remove('fa-pause');
-      playBtn.children[0].classList.add('fa-play');
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    });
-
     const btnLogic = () => {
       playBtn.addEventListener('click', () => {
         playBtn.children[0].classList.toggle('fa-play');
@@ -106,6 +85,18 @@ import { trackComponents } from './trackComponents.js'
       volumeInput.addEventListener('change', () => {
         audioElement.volume = volumeInput.value / 100;
       });
+    };
+
+    const albumCoverHide = () => {
+      trackContainerNum.classList.remove('playingMediaHeight')
+      trackInformation.classList.remove('animation-start');
+      trackContainerNum.classList.remove('pausedMediaHeight');
+      albumCover.classList.remove('spinning-cover');
+      albumCover.classList.remove('paused-album-cover');
+      playBtn.children[0].classList.remove('fa-pause');
+      playBtn.children[0].classList.add('fa-play');
+      audioElement.pause();
+      audioElement.currentTime = 0;
     }
 
     function trackGenresLogic(btn, gen) {
@@ -113,21 +104,47 @@ import { trackComponents } from './trackComponents.js'
         trackContainer.forEach(genre => {
           if (genre.classList[2] !== gen) {
             genre.classList.add('hideGenres');
-            trackContainerNum.classList.remove('playingMediaHeight')
-            trackInformation.classList.remove('animation-start');
-            trackContainerNum.classList.remove('removeHeight');
-            albumCover.classList.remove('spinning-cover');
-            albumCover.classList.remove('paused-album-cover');
-            playBtn.children[0].classList.remove('fa-pause');
-            playBtn.children[0].classList.add('fa-play');
-            audioElement.pause();
-            audioElement.currentTime = 0;
+            albumCoverHide()
           } else {
             genre.classList.remove('hideGenres')
           }
         });
       });
-    }
+    };
+
+    document.body.addEventListener('click', (ev) => {
+      if (ev.target.classList[1] !== `album-cover-${num}`) {
+        if (ev.target.classList.value !== `track-controls`
+          && ev.target.classList.value !== `track-info`
+          && ev.target.classList[0] !== `track-information`
+          && ev.target.classList[1] !== `fa-play`
+          && ev.target.classList[1] !== `fa-pause`
+          && ev.target.classList[0] !== `play-btn`) {
+
+          albumCoverHide()
+        }
+      } else if (ev.target.classList[1] == `album-cover-${num}`) {
+        trackContainerNum.classList.remove('playingMediaHeight')
+        trackInformation.classList.toggle('animation-start');
+        trackContainerNum.classList.toggle('pausedMediaHeight');
+        albumCover.classList.remove('spinning-cover');
+        albumCover.classList.remove('paused-album-cover');
+        playBtn.children[0].classList.remove('fa-pause');
+        playBtn.children[0].classList.add('fa-play');
+        audioElement.pause();
+        audioElement.currentTime = 0;
+      }
+    });
+
+
+    allBtn.addEventListener('click', () => {
+      trackContainer.forEach(genre => {
+        if (genre.classList[3] === 'hideGenres') {
+          genre.classList.remove('hideGenres');
+        }
+      });
+    });
+
 
 
     btnLogic();
