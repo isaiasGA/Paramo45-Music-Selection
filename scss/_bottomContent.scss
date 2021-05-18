@@ -1,0 +1,25 @@
+.bottom-section {
+  background-color: #BCBCBC;
+  width: 100%;
+  height: 22%;
+
+  .bottom-img {
+    object-fit: fill;
+    width: 39%;
+    position: relative;
+    bottom: -2%;
+    right: 2%;
+  }
+
+  .text-container {
+    position: relative;
+    bottom: 78%;
+    margin-left: 23%;
+
+    .bottom-text {
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      }
+    }
+  }
