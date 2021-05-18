@@ -30,24 +30,6 @@ import { trackComponents } from './trackComponents.js'
     const popBtn = document.querySelector('.pop');
     const allBtn = document.querySelector('.all');
 
-    const btnLogic = () => {
-      playBtn.addEventListener('click', () => {
-        playBtn.children[0].classList.toggle('fa-play');
-        playBtn.children[0].classList.toggle('fa-pause');
-        if (audio.paused) {
-          audio.play();
-          trackContainerNum.classList.add('playingMediaHeight')
-          albumCover.classList.add('spinning-cover');
-          albumCover.classList.remove('paused-album-cover');
-        } else {
-          audio.pause();
-          trackContainerNum.classList.remove('playingMediaHeight')
-          albumCover.classList.remove('spinning-cover');
-          albumCover.classList.add('paused-album-cover');
-        };
-      });
-    };
-
     const audioElementLogic = () => {
       audioElement.addEventListener('timeupdate', () => {
         let seconds = parseInt(audioElement.currentTime % 60);
@@ -60,7 +42,8 @@ import { trackComponents } from './trackComponents.js'
         playBtn.children[0].classList.remove('fa-pause');
         albumCover.classList.remove('spinning-cover');
         albumCover.classList.add('paused-album-cover');
-        trackContainerNum.classList.remove('playingMediaHeight')
+        trackContainerNum.classList.remove('playingMediaHeight');
+        trackContainerNum.classList.add('pausedMediaHeight')
         audioElement.currentTime = 0;
       })
 
@@ -88,6 +71,7 @@ import { trackComponents } from './trackComponents.js'
     };
 
     const albumCoverHide = () => {
+      trackContainerNum.classList.remove('openMediaHeight');
       trackContainerNum.classList.remove('playingMediaHeight')
       trackInformation.classList.remove('animation-start');
       trackContainerNum.classList.remove('pausedMediaHeight');
@@ -112,6 +96,26 @@ import { trackComponents } from './trackComponents.js'
       });
     };
 
+    const btnLogic = () => {
+      playBtn.addEventListener('click', () => {
+        playBtn.children[0].classList.toggle('fa-play');
+        playBtn.children[0].classList.toggle('fa-pause');
+        if (audio.paused) {
+          audio.play();
+          trackContainerNum.classList.add('playingMediaHeight');
+          trackContainerNum.classList.remove('pausedMediaHeight');
+          albumCover.classList.add('spinning-cover');
+          albumCover.classList.remove('paused-album-cover');
+        } else {
+          audio.pause();
+          trackContainerNum.classList.remove('playingMediaHeight');
+          trackContainerNum.classList.add('pausedMediaHeight')
+          albumCover.classList.remove('spinning-cover');
+          albumCover.classList.add('paused-album-cover');
+        };
+      });
+    };
+
     document.body.addEventListener('click', (ev) => {
       if (ev.target.classList[1] !== `album-cover-${num}`) {
         if (ev.target.classList.value !== `track-controls`
@@ -124,9 +128,10 @@ import { trackComponents } from './trackComponents.js'
           albumCoverHide()
         }
       } else if (ev.target.classList[1] == `album-cover-${num}`) {
-        trackContainerNum.classList.remove('playingMediaHeight')
+        trackContainerNum.classList.remove('playingMediaHeight');
+        trackContainerNum.classList.remove('pausedMediaHeight');
+        trackContainerNum.classList.toggle('openMediaHeight');
         trackInformation.classList.toggle('animation-start');
-        trackContainerNum.classList.toggle('pausedMediaHeight');
         albumCover.classList.remove('spinning-cover');
         albumCover.classList.remove('paused-album-cover');
         playBtn.children[0].classList.remove('fa-pause');
@@ -173,7 +178,43 @@ import { trackComponents } from './trackComponents.js'
   trackDataLogic(10)
   trackDataLogic(11)
   trackDataLogic(12)
-
+  trackDataLogic(13)
+  trackDataLogic(14)
+  trackDataLogic(15)
+  trackDataLogic(16)
+  trackDataLogic(17)
+  trackDataLogic(18)
+  trackDataLogic(19)
+  trackDataLogic(20)
+  trackDataLogic(21)
+  trackDataLogic(22)
+  trackDataLogic(23)
+  trackDataLogic(24)
+  trackDataLogic(25)
+  trackDataLogic(26)
+  trackDataLogic(27)
+  trackDataLogic(28)
+  trackDataLogic(29)
+  trackDataLogic(30)
+  trackDataLogic(31)
+  trackDataLogic(32)
+  trackDataLogic(33)
+  trackDataLogic(34)
+  trackDataLogic(35)
+  trackDataLogic(36)
+  trackDataLogic(37)
+  trackDataLogic(38)
+  trackDataLogic(39)
+  trackDataLogic(40)
+  trackDataLogic(41)
+  trackDataLogic(42)
+  trackDataLogic(43)
+  trackDataLogic(44)
+  trackDataLogic(45)
+  trackDataLogic(46)
+  trackDataLogic(47)
+  trackDataLogic(48)
+  trackDataLogic(49)
 })()
 
 

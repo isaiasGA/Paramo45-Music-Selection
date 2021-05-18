@@ -1,5 +1,5 @@
-@mixin generalAnimation($duration) {
-  transition-duration: $duration;
+@mixin generalAnimation() {
+  transition-duration: 2.5s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -41,37 +41,40 @@
 
 .trackContainer {
   height: 44vh;
-  @include generalAnimation(1.5s);  
+  @include generalAnimation();  
 }
 
 .hideGenres{
   display: none;
   height: 0;
-  @include generalAnimation(1.5s);
+}
+
+.openMediaHeight {
+margin-bottom: 55%;
 }
 
 .pausedMediaHeight {
-  height: 72vh;
-  @include generalAnimation(1.8s);
+  margin-bottom: 62%;
+  @include generalAnimation();
 }
 
 .playingMediaHeight {
-  height: 64vh;
-  @include generalAnimation(1.5s);
+  margin-bottom: 40%;  
+  @include generalAnimation();
 }
 
 .album-container {
   background-color: $black;
   position: relative;
   z-index: 1;
-  @include generalAnimation(2s);
+  @include generalAnimation();
 }
 
 .album-cover {
   width: 100%;
   height: 42vh;
   object-fit: fill;
-  @include generalAnimation(2s);
+  @include generalAnimation();
 }
   
 .spinning-cover {
@@ -82,7 +85,7 @@
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: both;
-  @include generalAnimation(2s);
+  @include generalAnimation();
 
   width: 70%;
   padding: 4% 0;
@@ -110,14 +113,17 @@
 
 .track-information {
   height: 26vh;
-  @include generalAnimation(1.5s);
+  @include generalAnimation();
   transform: translateY(-231px);
   background-color: $black;
 
 }
 
 .animation-start {
-  transform: translateY(0);
+  transform: translateY(-9px);
+  padding-top: 5%;
+  @include generalAnimation();
+
 }
 
 .track-info {

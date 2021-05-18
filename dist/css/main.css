@@ -305,8 +305,8 @@ header .title {
 
 .trackContainer {
   height: 44vh;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -316,18 +316,16 @@ header .title {
 .hideGenres {
   display: none;
   height: 0;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.openMediaHeight {
+  margin-bottom: 55%;
 }
 
 .pausedMediaHeight {
-  height: 72vh;
-  -webkit-transition-duration: 1.8s;
-          transition-duration: 1.8s;
+  margin-bottom: 62%;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -335,9 +333,9 @@ header .title {
 }
 
 .playingMediaHeight {
-  height: 64vh;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+  margin-bottom: 40%;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -348,8 +346,8 @@ header .title {
   background-color: #464646;
   position: relative;
   z-index: 1;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -361,8 +359,8 @@ header .title {
   height: 42vh;
   -o-object-fit: fill;
      object-fit: fill;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -383,8 +381,8 @@ header .title {
           animation-direction: normal;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -424,8 +422,8 @@ header .title {
 
 .track-information {
   height: 26vh;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -436,8 +434,15 @@ header .title {
 }
 
 .animation-start {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+  padding-top: 5%;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .track-info {
