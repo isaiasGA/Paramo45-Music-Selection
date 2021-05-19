@@ -24,7 +24,7 @@
     height: 67rem;
     display: flex;
     justify-content: space-between;
-    font-size: 13rem;
+    font-size: 10rem;
 
     .music-genre {
       cursor: pointer;
@@ -50,16 +50,16 @@
 }
 
 .openMediaHeight {
-margin-bottom: 55%;
+margin-bottom: 71%;
 }
 
 .pausedMediaHeight {
-  margin-bottom: 62%;
+  margin-bottom: 53%;
   @include generalAnimation();
 }
 
 .playingMediaHeight {
-  margin-bottom: 40%;  
+  margin-bottom: 31%;  
   @include generalAnimation();
 }
 
@@ -127,13 +127,15 @@ margin-bottom: 55%;
 }
 
 .track-info {
+  font-size: 14rem;
   color: $white;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 52%;
+  height: 54%;
   align-items: center;
+  margin-bottom: 4%;
 }
 
 .track-controls {
@@ -148,9 +150,9 @@ margin-bottom: 55%;
 }
 
 .play-btn {
-  @include volControlandPlayBtn(26px, 112px);
-  width: 50px;
-  height: 50px;
+  @include volControlandPlayBtn(26px, 102px);
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   background-color: $white;
   cursor: pointer;
@@ -158,13 +160,13 @@ margin-bottom: 55%;
 }
 
 .fa-play {
-  @include positioningVolElem(32%, 37%);
+  @include positioningVolElem(30%, 34%);
   font-size: 120%;
   color: $black;
 }
 
 .fa-pause {
-  @include positioningVolElem(32%, 31%);
+  @include positioningVolElem(30%, 29%);
   font-size: 120%;
   color: $black;
 }
@@ -184,7 +186,7 @@ margin-bottom: 55%;
 
 input[type="range"] {
   -webkit-appearance: none;
-  width: 170%;
+  width: 146%;
 }
 
 input[type="range"]::-ms-track {

@@ -1,0 +1,247 @@
+/*==================Mobile Devices============================*/
+
+@media (min-device-width: 339px) and (max-device-width: 370px) {
+
+  .openMediaHeight {
+    margin-bottom: 62%;
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 36%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 59%;
+  }
+
+  .bottom-section .bottom-img {
+    top: 6%;
+  }
+}
+
+@media (min-width: 375px) {
+  .openMediaHeight {
+    margin-bottom: 60%;
+  }
+}
+
+@media (min-width: 390px) {
+
+   .openMediaHeight {
+    margin-bottom: 58%;
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 38%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 61%;
+  }
+
+  .bottom-section .bottom-img {
+    top: -2%;
+  }
+}
+
+
+@media (min-width: 400px) {
+
+  .openMediaHeight {
+   margin-bottom: 56%;
+ }
+
+ .playingMediaHeight {
+   margin-bottom: 41%;
+ }
+
+ .bottom-section .bottom-img {
+   top: -4%;
+ }
+
+ bottom-section .text-container {
+  position: relative;
+  bottom: 78%;
+  margin-left: 22%;
+ }
+}
+
+@media (min-device-width: 412px) and (max-device-width: 475px) {
+  .music-showcase-section .music-menu {
+    font-size: 13rem;
+  }
+  .music-showcase-section .music-menu .music-genre .music-logos {
+    width: 29rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+
+  .album-cover {
+    object-fit: fill;
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 42%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 64%;
+  }
+
+  .play-btn {
+    top: 28px;
+    right: 111px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .fa-play {
+    top: 29%;
+    left: 36%;
+    font-size: 146%;
+  }
+
+  .fa-pause {
+    position: relative;
+    top: 30%;
+    left: 31%;
+    font-size: 146%;
+    color: #464646;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 179%;
+  } 
+
+  .track-info {
+    font-size: 17rem;
+    left: 3%;
+    position: relative;
+  }
+
+  .track-information {
+    height: 26vh;
+  }
+
+  .openMediaHeight {
+    margin-bottom: 54%;
+}
+  .animation-start {
+    padding-top: 2%;
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 42%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 64%;
+  }
+
+  .bottom-section {
+    .bottom-img {
+      top: -10%;
+    }
+
+    .text-container {
+      bottom: 96%;
+      margin-left: 23%;
+    }
+
+    .text-container .bottom-text {
+      font-size: 17rem;
+      font-weight: 500;
+     }
+  }
+  
+}
+
+@media (min-width: 480px) {
+  .music-showcase-section .music-menu {
+    font-size: 13rem;
+  }
+  .music-showcase-section .music-menu .music-genre .music-logos {
+    width: 29rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+
+  .album-cover {
+    object-fit: fill;
+  }
+  
+  .album-cover {
+    object-fit: fill;
+  }
+
+  .openMediaHeight {
+    margin-bottom: 48%; 
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 46%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 68%;
+  }
+
+  .play-btn {
+    top: 28px;
+    right: 111px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .fa-play {
+    top: 29%;
+    left: 36%;
+    font-size: 146%;
+  }
+
+  .fa-pause {
+    position: relative;
+    top: 30%;
+    left: 31%;
+    font-size: 146%;
+    color: #464646;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 179%;
+  } 
+
+  .track-info {
+    font-size: 17rem;
+    left: 3%;
+    position: relative;
+  }
+
+  .track-information {
+    height: 26vh;
+  }
+
+  .animation-start {
+    padding-top: 2%;
+  }
+
+  .bottom-section {
+    .bottom-img {
+      top: 0%;
+    }
+
+    .text-container {
+      bottom: 96%;
+      margin-left: 23%;
+    }
+
+    .text-container .bottom-text {
+      font-size: 17rem;
+      font-weight: 500;
+     }
+  }
+}
+
+

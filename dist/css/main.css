@@ -288,7 +288,7 @@ header .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 13rem;
+  font-size: 10rem;
 }
 
 .music-showcase-section .music-menu .music-genre {
@@ -319,11 +319,11 @@ header .title {
 }
 
 .openMediaHeight {
-  margin-bottom: 55%;
+  margin-bottom: 71%;
 }
 
 .pausedMediaHeight {
-  margin-bottom: 62%;
+  margin-bottom: 53%;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
@@ -333,7 +333,7 @@ header .title {
 }
 
 .playingMediaHeight {
-  margin-bottom: 40%;
+  margin-bottom: 31%;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
@@ -446,6 +446,7 @@ header .title {
 }
 
 .track-info {
+  font-size: 14rem;
   color: #fff;
   font-weight: 700;
   display: -webkit-box;
@@ -458,10 +459,11 @@ header .title {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 52%;
+  height: 54%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 4%;
 }
 
 .track-controls {
@@ -488,9 +490,9 @@ header .title {
 .play-btn {
   position: relative;
   top: 26px;
-  right: 112px;
-  width: 50px;
-  height: 50px;
+  right: 102px;
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
@@ -500,16 +502,16 @@ header .title {
 
 .fa-play {
   position: relative;
-  top: 32%;
-  left: 37%;
+  top: 30%;
+  left: 34%;
   font-size: 120%;
   color: #464646;
 }
 
 .fa-pause {
   position: relative;
-  top: 32%;
-  left: 31%;
+  top: 30%;
+  left: 29%;
   font-size: 120%;
   color: #464646;
 }
@@ -533,7 +535,7 @@ header .title {
 
 input[type="range"] {
   -webkit-appearance: none;
-  width: 170%;
+  width: 146%;
 }
 
 input[type="range"]::-ms-track {
@@ -600,17 +602,18 @@ input[type="range"]::-ms-track {
      object-fit: fill;
   width: 39%;
   position: relative;
-  bottom: -2%;
+  top: 16%;
   right: 2%;
 }
 
 .bottom-section .text-container {
   position: relative;
   bottom: 78%;
-  margin-left: 23%;
+  margin-left: 14%;
 }
 
 .bottom-section .text-container .bottom-text {
+  font-size: 14rem;
   color: #fff;
   font-weight: 700;
   text-align: center;
@@ -635,5 +638,205 @@ footer .bottom-nav {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 100%;
+}
+
+/*==================Mobile Devices============================*/
+@media (min-device-width: 339px) and (max-device-width: 370px) {
+  .openMediaHeight {
+    margin-bottom: 62%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 36%;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 59%;
+  }
+  .bottom-section .bottom-img {
+    top: 6%;
+  }
+}
+
+@media (min-width: 375px) {
+  .openMediaHeight {
+    margin-bottom: 60%;
+  }
+}
+
+@media (min-width: 390px) {
+  .openMediaHeight {
+    margin-bottom: 58%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 38%;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 61%;
+  }
+  .bottom-section .bottom-img {
+    top: -2%;
+  }
+}
+
+@media (min-width: 400px) {
+  .openMediaHeight {
+    margin-bottom: 56%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 41%;
+  }
+  .bottom-section .bottom-img {
+    top: -4%;
+  }
+  bottom-section .text-container {
+    position: relative;
+    bottom: 78%;
+    margin-left: 22%;
+  }
+}
+
+@media (min-device-width: 412px) and (max-device-width: 475px) {
+  .music-showcase-section .music-menu {
+    font-size: 13rem;
+  }
+  .music-showcase-section .music-menu .music-genre .music-logos {
+    width: 29rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+  .album-cover {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .playingMediaHeight {
+    margin-bottom: 42%;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 64%;
+  }
+  .play-btn {
+    top: 28px;
+    right: 111px;
+    width: 55px;
+    height: 55px;
+  }
+  .fa-play {
+    top: 29%;
+    left: 36%;
+    font-size: 146%;
+  }
+  .fa-pause {
+    position: relative;
+    top: 30%;
+    left: 31%;
+    font-size: 146%;
+    color: #464646;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 179%;
+  }
+  .track-info {
+    font-size: 17rem;
+    left: 3%;
+    position: relative;
+  }
+  .track-information {
+    height: 26vh;
+  }
+  .openMediaHeight {
+    margin-bottom: 54%;
+  }
+  .animation-start {
+    padding-top: 2%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 42%;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 64%;
+  }
+  .bottom-section .bottom-img {
+    top: -10%;
+  }
+  .bottom-section .text-container {
+    bottom: 96%;
+    margin-left: 23%;
+  }
+  .bottom-section .text-container .bottom-text {
+    font-size: 17rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 480px) {
+  .music-showcase-section .music-menu {
+    font-size: 13rem;
+  }
+  .music-showcase-section .music-menu .music-genre .music-logos {
+    width: 29rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+  .album-cover {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .album-cover {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .openMediaHeight {
+    margin-bottom: 48%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 46%;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 68%;
+  }
+  .play-btn {
+    top: 28px;
+    right: 111px;
+    width: 55px;
+    height: 55px;
+  }
+  .fa-play {
+    top: 29%;
+    left: 36%;
+    font-size: 146%;
+  }
+  .fa-pause {
+    position: relative;
+    top: 30%;
+    left: 31%;
+    font-size: 146%;
+    color: #464646;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 179%;
+  }
+  .track-info {
+    font-size: 17rem;
+    left: 3%;
+    position: relative;
+  }
+  .track-information {
+    height: 26vh;
+  }
+  .animation-start {
+    padding-top: 2%;
+  }
+  .bottom-section .bottom-img {
+    top: 0%;
+  }
+  .bottom-section .text-container {
+    bottom: 96%;
+    margin-left: 23%;
+  }
+  .bottom-section .text-container .bottom-text {
+    font-size: 17rem;
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=main.css.map */
