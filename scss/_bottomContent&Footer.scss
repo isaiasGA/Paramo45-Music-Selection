@@ -8,18 +8,16 @@
     width: 39%;
     position: relative;
     top: 1%;
-    right: 2%;
+    right: 8%;
   }
 
   .text-container {
     position: relative;
-    bottom: 107%;
+    bottom: 137px;
     margin-left: 17%;
 
     .bottom-text {
-      font-size: 14rem;
-      color: #fff;
-      font-weight: 700;
+      @include paragraphFont;
       text-align: center;
       }
     }

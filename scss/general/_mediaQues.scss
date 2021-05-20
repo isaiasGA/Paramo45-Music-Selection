@@ -5,7 +5,6 @@
     bottom: 4vh;
   }
 
- 
   .track-info {
     font-size: 17rem;
   }
@@ -51,9 +50,23 @@
 }
 
 @media (min-width: 414px) and (min-height: 896px) {
-  .track-information {
-    height: 31vh;
-  }
+
+  header {
+    .top-header {
+      .menu-logo-container {
+        h2 {
+          font-size: 15rem;
+        }
+        .earbuds-img {
+          width: 29rem;
+        }
+      }
+    }
+    .title {
+      width: 43%;
+      font-size: 25rem;
+    }
+  }  
 
   .openMediaHeight {
     margin-bottom: 30vh;
@@ -122,11 +135,15 @@
         margin: 7% 0;
         font-size: 18rem;
 
-        .music-genre .music-logos {
-          width: 48rem;
-          margin: 0 auto;
-          padding-bottom: 5rem;
-        }
+        .music-genre {
+          font-size: 18rem;
+
+          .music-logos {
+            width: 48rem;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+          }
+        } 
      }
 
      .openMediaHeight {
@@ -146,7 +163,7 @@
     }
 
     .track-info {
-      font-size: 23rem;
+      font-size: 28rem;
       margin-top: 0;
       margin-bottom: 8%;
       height: 23vh;

@@ -1,5 +1,5 @@
 
-
+$darkBlack : #040404;
 $black: #464646;
 $white: #fff;
 
@@ -14,6 +14,7 @@ $white: #fff;
   font-size: $size;
   font-style: $style;
   font-weight: bold;
+  color: $darkBlack;
 }
 
 @mixin musicMenuFont() {
@@ -23,10 +24,17 @@ $white: #fff;
   
 }
 
-@mixin trackInfoFont($size, $color) {
+@mixin trackInfoFont() {
   font-family: 'Newsreader', serif;
   font-weight: 500;
-  font-size: $size;
-  color: $color
+  font-size: 16rem;
+  color: $white
+}
+
+@mixin paragraphFont {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: $black;
+  font-weight: bold;
 }
 

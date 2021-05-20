@@ -57,6 +57,8 @@ fieldset {
   margin: 0;
 }
 
+/*============================ MIXINS ======================================================*/
+/*==================================== GENERAL =========================================*/
 html {
   height: 100%;
   width: 100%;
@@ -87,7 +89,14 @@ img {
 }
 
 .hideMainContent {
-  display: none;
+  position: relative;
+  z-index: -1;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 header {
@@ -150,7 +159,7 @@ header .top-header .menu-btn .burger-btn {
   top: 10rem;
   height: 5rem;
   width: 30rem;
-  background-color: black;
+  background-color: #040404;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -161,7 +170,7 @@ header .top-header .menu-btn .burger-btn::before {
   top: -10rem;
   height: 5rem;
   width: 34rem;
-  background-color: black;
+  background-color: #040404;
 }
 
 header .top-header .menu-btn .burger-btn::after {
@@ -170,7 +179,7 @@ header .top-header .menu-btn .burger-btn::after {
   top: 10rem;
   height: 5rem;
   width: 25;
-  background-color: black;
+  background-color: #040404;
 }
 
 header .top-header .menu-btn .burger-btn.open {
@@ -220,7 +229,7 @@ header .top-header .navigation .nav-menu {
           align-items: center;
   height: 100vh;
   overflow: hidden;
-  background: #272727;
+  background: #040404;
   padding-right: 1rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -243,6 +252,8 @@ header .top-header .navigation .nav-menu__item {
 header .top-header .navigation .nav-menu__item.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  position: relative;
+  z-index: 1;
 }
 
 header .top-header .navigation .nav-menu .link {
@@ -276,13 +287,13 @@ header .title {
   text-align: center;
   position: relative;
   bottom: 1vh;
-  border: 3px solid #646464;
   width: 37%;
   margin: 0 auto;
   font-family: 'Cormorant', serif;
   font-size: 19rem;
   font-style: italic;
   font-weight: bold;
+  color: #040404;
 }
 
 .music-showcase-section {
@@ -613,19 +624,20 @@ input[type="range"]::-ms-track {
   width: 39%;
   position: relative;
   top: 1%;
-  right: 2%;
+  right: 8%;
 }
 
 .bottom-section .text-container {
   position: relative;
-  bottom: 107%;
+  bottom: 137px;
   margin-left: 17%;
 }
 
 .bottom-section .text-container .bottom-text {
-  font-size: 14rem;
-  color: #fff;
-  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: #464646;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -692,8 +704,15 @@ footer .bottom-nav {
 }
 
 @media (min-width: 414px) and (min-height: 896px) {
-  .track-information {
-    height: 31vh;
+  header .top-header .menu-logo-container h2 {
+    font-size: 15rem;
+  }
+  header .top-header .menu-logo-container .earbuds-img {
+    width: 29rem;
+  }
+  header .title {
+    width: 43%;
+    font-size: 25rem;
   }
   .openMediaHeight {
     margin-bottom: 30vh;
@@ -749,6 +768,9 @@ footer .bottom-nav {
     margin: 7% 0;
     font-size: 18rem;
   }
+  .music-showcase-section .music-menu .music-genre {
+    font-size: 18rem;
+  }
   .music-showcase-section .music-menu .music-genre .music-logos {
     width: 48rem;
     margin: 0 auto;
@@ -767,7 +789,7 @@ footer .bottom-nav {
     height: 38vh;
   }
   .music-showcase-section .track-info {
-    font-size: 23rem;
+    font-size: 28rem;
     margin-top: 0;
     margin-bottom: 8%;
     height: 23vh;
