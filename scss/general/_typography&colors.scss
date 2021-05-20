@@ -3,31 +3,30 @@
 $black: #464646;
 $white: #fff;
 
-@mixin headerTitleSettings($size, $weight) {
+@mixin headerTitleSettings($size) {
   font-size: $size;
-  font-weight: $weight;
   font-family: 'Dancing Script', cursive;
+  font-weight: bold;
 }
-
 
 @mixin mainTitleFont($size, $style) {
   font-family: 'Cormorant', serif;
   font-size: $size;
   font-style: $style;
+  font-weight: bold;
 }
 
 @mixin musicMenuFont() {
   font-family: 'Neuton', serif;
-  font-weight: 200;
+  font-weight: bold;
+  font-size: 12rem;
+  
 }
 
-@mixin headerFont() {
-  font-family: 'Playfair Display', serif;
-  font-weight: 300;
-}
-
-@mixin paragraphsFont() {
-  font-family: 'Spectral', serif;
-  font-weight: 300;
+@mixin trackInfoFont($size, $color) {
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: $size;
+  color: $color
 }
 

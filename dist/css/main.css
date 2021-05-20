@@ -115,22 +115,22 @@ header .top-header .menu-logo-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 7px solid;
+  border: 3px solid;
   margin-left: .5em;
   margin-top: .5em;
 }
 
 header .top-header .menu-logo-container .earbuds-img {
-  width: 31rem;
-  margin-left: 19rem;
-  margin-top: 5rem;
+  width: 22rem;
+  margin-left: 18rem;
+  margin-top: 10rem;
 }
 
 header .top-header .menu-logo-container h2 {
   padding: 6rem;
-  font-size: 11rem;
-  font-weight: bold;
+  font-size: 12rem;
   font-family: 'Dancing Script', cursive;
+  font-weight: bold;
 }
 
 header .top-header .menu-btn {
@@ -276,9 +276,13 @@ header .title {
   text-align: center;
   position: relative;
   bottom: 1vh;
+  border: 3px solid #646464;
+  width: 37%;
+  margin: 0 auto;
   font-family: 'Cormorant', serif;
-  font-size: 26rem;
+  font-size: 19rem;
   font-style: italic;
+  font-weight: bold;
 }
 
 .music-showcase-section {
@@ -293,13 +297,13 @@ header .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 11rem;
 }
 
 .music-showcase-section .music-menu .music-genre {
   cursor: pointer;
   font-family: 'Neuton', serif;
-  font-weight: 200;
+  font-weight: bold;
+  font-size: 12rem;
 }
 
 .music-showcase-section .music-menu .music-genre .music-logos {
@@ -451,9 +455,10 @@ header .title {
 }
 
 .track-info {
-  font-size: 14rem;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: 16rem;
   color: #fff;
-  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

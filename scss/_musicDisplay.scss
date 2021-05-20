@@ -23,7 +23,6 @@
     height: 67rem;
     display: flex;
     justify-content: space-between;
-    font-size: 11rem;
 
     .music-genre {
       cursor: pointer;
@@ -126,9 +125,7 @@ margin-bottom: 35vh;
 }
 
 .track-info {
-  font-size: 14rem;
-  color: $white;
-  font-weight: 700;
+  @include trackInfoFont(16rem, $white);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

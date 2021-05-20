@@ -16,19 +16,19 @@
     .menu-logo-container {
       display: flex;
       flex-direction: column;
-      border: 7px solid;
+      border: 3px solid;
       margin-left: .5em;
       margin-top: .5em;
 
       .earbuds-img {
-        width: 31rem; //%
-        margin-left: 19rem; //em
-        margin-top: 5rem; //em
+        width: 22rem; //%
+        margin-left: 18rem; //em
+        margin-top: 10rem; //em
       }
 
       h2 {
         padding: 6rem; //em
-        @include headerTitleSettings(11rem, bold)
+        @include headerTitleSettings(12rem)
       }
     }
 
@@ -145,8 +145,11 @@
   .title {
     text-align: center;
     position: relative;
-    bottom: 1vh;   
-     @include mainTitleFont(26rem, italic);
+    bottom: 1vh;
+    border: 3px solid #646464;
+    width: 37%;
+    margin: 0 auto;  
+     @include mainTitleFont(19rem, italic);
   }
 }
 
