@@ -15,9 +15,13 @@ cite {font-style:normal;}
 fieldset{border-width:0; padding:0; margin:0;}
 
 html{ 
+   height: 100%; 
+   width: 100%;
    font-size: 1px;/*for using REM units*/
 }
 body{
+   height: 100%; 
+   width: 100%;
    margin: 0;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
    font-size: 16rem;

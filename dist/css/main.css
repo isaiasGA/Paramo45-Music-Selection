@@ -58,11 +58,15 @@ fieldset {
 }
 
 html {
+  height: 100%;
+  width: 100%;
   font-size: 1px;
   /*for using REM units*/
 }
 
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16rem;
@@ -91,7 +95,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 43vh;
+  height: 36vh;
 }
 
 header .top-header {
@@ -270,7 +274,8 @@ header .top-header .nav-menu__item:nth-child(3) {
 
 header .title {
   text-align: center;
-  padding-top: .8em;
+  position: relative;
+  bottom: 1vh;
   font-family: 'Cormorant', serif;
   font-size: 26rem;
   font-style: italic;
@@ -288,7 +293,7 @@ header .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 10rem;
+  font-size: 11rem;
 }
 
 .music-showcase-section .music-menu .music-genre {
@@ -298,7 +303,7 @@ header .title {
 }
 
 .music-showcase-section .music-menu .music-genre .music-logos {
-  width: 22rem;
+  width: 32rem;
   margin: 0 auto;
   padding-bottom: 5rem;
 }
@@ -319,11 +324,11 @@ header .title {
 }
 
 .openMediaHeight {
-  margin-bottom: 71%;
+  margin-bottom: 35vh;
 }
 
 .pausedMediaHeight {
-  margin-bottom: 53%;
+  margin-bottom: 86%;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
@@ -333,7 +338,7 @@ header .title {
 }
 
 .playingMediaHeight {
-  margin-bottom: 31%;
+  margin-bottom: 64%;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
@@ -357,8 +362,8 @@ header .title {
 .album-cover {
   width: 100%;
   height: 42vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
@@ -421,15 +426,15 @@ header .title {
 }
 
 .track-information {
-  height: 26vh;
+  height: 36vh;
   -webkit-transition-duration: 2.5s;
           transition-duration: 2.5s;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  -webkit-transform: translateY(-231px);
-          transform: translateY(-231px);
+  -webkit-transform: translateY(-38vh);
+          transform: translateY(-38vh);
   background-color: #464646;
 }
 
@@ -502,16 +507,16 @@ header .title {
 
 .fa-play {
   position: relative;
-  top: 30%;
-  left: 34%;
+  top: 27%;
+  left: 36%;
   font-size: 120%;
   color: #464646;
 }
 
 .fa-pause {
   position: relative;
-  top: 30%;
-  left: 29%;
+  top: 27%;
+  left: 30%;
   font-size: 120%;
   color: #464646;
 }
@@ -602,14 +607,14 @@ input[type="range"]::-ms-track {
      object-fit: fill;
   width: 39%;
   position: relative;
-  top: 16%;
+  top: 1%;
   right: 2%;
 }
 
 .bottom-section .text-container {
   position: relative;
-  bottom: 78%;
-  margin-left: 14%;
+  bottom: 107%;
+  margin-left: 17%;
 }
 
 .bottom-section .text-container .bottom-text {
@@ -641,202 +646,82 @@ footer .bottom-nav {
 }
 
 /*==================Mobile Devices============================*/
-@media (min-device-width: 339px) and (max-device-width: 370px) {
-  .openMediaHeight {
-    margin-bottom: 62%;
-  }
-  .playingMediaHeight {
-    margin-bottom: 36%;
-  }
-  .pausedMediaHeight {
-    margin-bottom: 59%;
-  }
-  .bottom-section .bottom-img {
-    top: 6%;
-  }
-}
-
 @media (min-width: 375px) {
-  .openMediaHeight {
-    margin-bottom: 60%;
-  }
-}
-
-@media (min-width: 390px) {
-  .openMediaHeight {
-    margin-bottom: 58%;
-  }
-  .playingMediaHeight {
-    margin-bottom: 38%;
-  }
-  .pausedMediaHeight {
-    margin-bottom: 61%;
-  }
-  .bottom-section .bottom-img {
-    top: -2%;
-  }
-}
-
-@media (min-width: 400px) {
-  .openMediaHeight {
-    margin-bottom: 56%;
-  }
-  .playingMediaHeight {
-    margin-bottom: 41%;
-  }
-  .bottom-section .bottom-img {
-    top: -4%;
-  }
-  bottom-section .text-container {
-    position: relative;
-    bottom: 78%;
-    margin-left: 22%;
-  }
-}
-
-@media (min-device-width: 412px) and (max-device-width: 475px) {
-  .music-showcase-section .music-menu {
-    font-size: 13rem;
-  }
-  .music-showcase-section .music-menu .music-genre .music-logos {
-    width: 29rem;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-  }
-  .album-cover {
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
-  .playingMediaHeight {
-    margin-bottom: 42%;
-  }
-  .pausedMediaHeight {
-    margin-bottom: 64%;
-  }
-  .play-btn {
-    top: 28px;
-    right: 111px;
-    width: 55px;
-    height: 55px;
-  }
-  .fa-play {
-    top: 29%;
-    left: 36%;
-    font-size: 146%;
-  }
-  .fa-pause {
-    position: relative;
-    top: 30%;
-    left: 31%;
-    font-size: 146%;
-    color: #464646;
-  }
-  input[type="range"] {
-    -webkit-appearance: none;
-    width: 179%;
+  .title {
+    bottom: 4vh;
   }
   .track-info {
     font-size: 17rem;
-    left: 3%;
-    position: relative;
   }
-  .track-information {
-    height: 26vh;
+  .play-btn {
+    top: 26px;
+    width: 50px;
+    height: 50px;
+    right: 109px;
   }
-  .openMediaHeight {
-    margin-bottom: 54%;
+  .fa-play {
+    top: 31%;
+    left: 36%;
+    font-size: 133%;
   }
-  .animation-start {
-    padding-top: 2%;
-  }
-  .playingMediaHeight {
-    margin-bottom: 42%;
-  }
-  .pausedMediaHeight {
-    margin-bottom: 64%;
-  }
-  .bottom-section .bottom-img {
-    top: -10%;
-  }
-  .bottom-section .text-container {
-    bottom: 96%;
-    margin-left: 23%;
-  }
-  .bottom-section .text-container .bottom-text {
-    font-size: 17rem;
-    font-weight: 500;
+  .fa-pause {
+    font-size: 138%;
   }
 }
 
-@media (min-width: 480px) {
-  .music-showcase-section .music-menu {
-    font-size: 13rem;
-  }
-  .music-showcase-section .music-menu .music-genre .music-logos {
-    width: 29rem;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-  }
-  .album-cover {
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
-  .album-cover {
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
-  .openMediaHeight {
-    margin-bottom: 48%;
+@media (min-width: 375px) and (min-height: 812px) {
+  .track-info {
+    margin-bottom: 13%;
   }
   .playingMediaHeight {
-    margin-bottom: 46%;
+    margin-bottom: 86%;
   }
   .pausedMediaHeight {
-    margin-bottom: 68%;
-  }
-  .play-btn {
-    top: 28px;
-    right: 111px;
-    width: 55px;
-    height: 55px;
-  }
-  .fa-play {
-    top: 29%;
-    left: 36%;
-    font-size: 146%;
-  }
-  .fa-pause {
-    position: relative;
-    top: 30%;
-    left: 31%;
-    font-size: 146%;
-    color: #464646;
-  }
-  input[type="range"] {
-    -webkit-appearance: none;
-    width: 179%;
-  }
-  .track-info {
-    font-size: 17rem;
-    left: 3%;
-    position: relative;
-  }
-  .track-information {
-    height: 26vh;
-  }
-  .animation-start {
-    padding-top: 2%;
-  }
-  .bottom-section .bottom-img {
-    top: 0%;
+    margin-bottom: 84%;
   }
   .bottom-section .text-container {
-    bottom: 96%;
-    margin-left: 23%;
+    position: relative;
+    bottom: 88%;
+    margin-left: 17%;
+  }
+}
+
+@media (min-width: 414px) and (min-height: 896px) {
+  .track-information {
+    height: 31vh;
+  }
+  .openMediaHeight {
+    margin-bottom: 30vh;
+  }
+  .pausedMediaHeight {
+    margin-bottom: 72%;
+  }
+  .playingMediaHeight {
+    margin-bottom: 49%;
+  }
+  .track-info {
+    font-size: 20rem;
+  }
+  .track-controls {
+    bottom: 32%;
+  }
+  .play-btn {
+    top: 32px;
+    width: 55px;
+    height: 55px;
+    right: 118px;
+  }
+  .fa-play {
+    font-size: 143%;
+  }
+  .fa-pause {
+    font-size: 146%;
+    top: 29%;
   }
   .bottom-section .text-container .bottom-text {
     font-size: 17rem;
-    font-weight: 500;
   }
 }
+
+/*================================Tablet Devices=======================================*/
 /*# sourceMappingURL=main.css.map */

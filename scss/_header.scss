@@ -7,7 +7,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 43vh;
+    height: 36vh;
   
   .top-header {
     display: flex;
@@ -144,8 +144,9 @@
 
   .title {
     text-align: center;
-    padding-top: .8em;
-    @include mainTitleFont(26rem, italic);
+    position: relative;
+    bottom: 1vh;   
+     @include mainTitleFont(26rem, italic);
   }
 }
 

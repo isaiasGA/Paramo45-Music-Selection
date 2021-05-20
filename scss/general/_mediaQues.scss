@@ -1,247 +1,101 @@
 /*==================Mobile Devices============================*/
-
-@media (min-device-width: 339px) and (max-device-width: 370px) {
-
-  .openMediaHeight {
-    margin-bottom: 62%;
-  }
-
-  .playingMediaHeight {
-    margin-bottom: 36%;
-  }
-
-  .pausedMediaHeight {
-    margin-bottom: 59%;
-  }
-
-  .bottom-section .bottom-img {
-    top: 6%;
-  }
-}
-
 @media (min-width: 375px) {
-  .openMediaHeight {
-    margin-bottom: 60%;
-  }
-}
-
-@media (min-width: 390px) {
-
-   .openMediaHeight {
-    margin-bottom: 58%;
+  
+  .title {
+    bottom: 4vh;
   }
 
-  .playingMediaHeight {
-    margin-bottom: 38%;
-  }
-
-  .pausedMediaHeight {
-    margin-bottom: 61%;
-  }
-
-  .bottom-section .bottom-img {
-    top: -2%;
-  }
-}
-
-
-@media (min-width: 400px) {
-
-  .openMediaHeight {
-   margin-bottom: 56%;
- }
-
- .playingMediaHeight {
-   margin-bottom: 41%;
- }
-
- .bottom-section .bottom-img {
-   top: -4%;
- }
-
- bottom-section .text-container {
-  position: relative;
-  bottom: 78%;
-  margin-left: 22%;
- }
-}
-
-@media (min-device-width: 412px) and (max-device-width: 475px) {
-  .music-showcase-section .music-menu {
-    font-size: 13rem;
-  }
-  .music-showcase-section .music-menu .music-genre .music-logos {
-    width: 29rem;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-  }
-
-  .album-cover {
-    object-fit: fill;
-  }
-
-  .playingMediaHeight {
-    margin-bottom: 42%;
-  }
-
-  .pausedMediaHeight {
-    margin-bottom: 64%;
+ 
+  .track-info {
+    font-size: 17rem;
   }
 
   .play-btn {
-    top: 28px;
-    right: 111px;
-    width: 55px;
-    height: 55px;
+    top: 26px;
+    width: 50px;
+    height: 50px;
+    right: 109px;
   }
 
   .fa-play {
-    top: 29%;
+    top: 31%;
     left: 36%;
-    font-size: 146%;
+    font-size: 133%;
   }
 
   .fa-pause {
-    position: relative;
-    top: 30%;
-    left: 31%;
-    font-size: 146%;
-    color: #464646;
+    font-size: 138%;
   }
+}
 
-  input[type="range"] {
-    -webkit-appearance: none;
-    width: 179%;
-  } 
+@media (min-width: 375px) and (min-height: 812px) {
 
   .track-info {
-    font-size: 17rem;
-    left: 3%;
+    margin-bottom: 13%;
+  }
+
+  .playingMediaHeight {
+    margin-bottom: 86%;
+  }
+
+  .pausedMediaHeight {
+    margin-bottom: 84%;
+  }
+
+  .bottom-section .text-container {
     position: relative;
+    bottom: 88%;
+    margin-left: 17%;
   }
 
+}
+
+@media (min-width: 414px) and (min-height: 896px) {
   .track-information {
-    height: 26vh;
+    height: 31vh;
   }
 
   .openMediaHeight {
-    margin-bottom: 54%;
-}
-  .animation-start {
-    padding-top: 2%;
-  }
-
-  .playingMediaHeight {
-    margin-bottom: 42%;
+    margin-bottom: 30vh;
   }
 
   .pausedMediaHeight {
-    margin-bottom: 64%;
+    margin-bottom: 72%;
   }
 
-  .bottom-section {
-    .bottom-img {
-      top: -10%;
-    }
+.playingMediaHeight {
+  margin-bottom: 49%;
+  }
 
-    .text-container {
-      bottom: 96%;
-      margin-left: 23%;
-    }
-
-    .text-container .bottom-text {
-      font-size: 17rem;
-      font-weight: 500;
-     }
+  .track-info {
+    font-size: 20rem;
   }
   
-}
-
-@media (min-width: 480px) {
-  .music-showcase-section .music-menu {
-    font-size: 13rem;
-  }
-  .music-showcase-section .music-menu .music-genre .music-logos {
-    width: 29rem;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-  }
-
-  .album-cover {
-    object-fit: fill;
-  }
-  
-  .album-cover {
-    object-fit: fill;
-  }
-
-  .openMediaHeight {
-    margin-bottom: 48%; 
-  }
-
-  .playingMediaHeight {
-    margin-bottom: 46%;
-  }
-
-  .pausedMediaHeight {
-    margin-bottom: 68%;
+  .track-controls {
+    bottom: 32%;
   }
 
   .play-btn {
-    top: 28px;
-    right: 111px;
+    top: 32px;
     width: 55px;
     height: 55px;
+    right: 118px;
   }
 
   .fa-play {
-    top: 29%;
-    left: 36%;
-    font-size: 146%;
+    font-size: 143%;
   }
 
   .fa-pause {
-    position: relative;
-    top: 30%;
-    left: 31%;
     font-size: 146%;
-    color: #464646;
+    top: 29%;
   }
 
-  input[type="range"] {
-    -webkit-appearance: none;
-    width: 179%;
-  } 
-
-  .track-info {
+  .bottom-section .text-container .bottom-text {
     font-size: 17rem;
-    left: 3%;
-    position: relative;
-  }
-
-  .track-information {
-    height: 26vh;
-  }
-
-  .animation-start {
-    padding-top: 2%;
-  }
-
-  .bottom-section {
-    .bottom-img {
-      top: 0%;
-    }
-
-    .text-container {
-      bottom: 96%;
-      margin-left: 23%;
-    }
-
-    .text-container .bottom-text {
-      font-size: 17rem;
-      font-weight: 500;
-     }
   }
 }
+
+/*================================Tablet Devices=======================================*/
 
 

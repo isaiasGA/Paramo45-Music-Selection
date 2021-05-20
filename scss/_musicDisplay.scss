@@ -16,7 +16,6 @@
   right: $right;
 }
 
-
 .music-showcase-section {
   margin: 21rem 0;
 
@@ -24,14 +23,14 @@
     height: 67rem;
     display: flex;
     justify-content: space-between;
-    font-size: 10rem;
+    font-size: 11rem;
 
     .music-genre {
       cursor: pointer;
       @include musicMenuFont;
 
       .music-logos {
-        width: 22rem; //%
+        width: 32rem; //%
         margin: 0 auto;
         padding-bottom: 5rem; //em
       }
@@ -50,16 +49,16 @@
 }
 
 .openMediaHeight {
-margin-bottom: 71%;
+margin-bottom: 35vh;
 }
 
 .pausedMediaHeight {
-  margin-bottom: 53%;
+  margin-bottom: 86%;
   @include generalAnimation();
 }
 
 .playingMediaHeight {
-  margin-bottom: 31%;  
+  margin-bottom: 64%;  
   @include generalAnimation();
 }
 
@@ -73,7 +72,7 @@ margin-bottom: 71%;
 .album-cover {
   width: 100%;
   height: 42vh;
-  object-fit: cover;
+  object-fit: fill;
   @include generalAnimation();
 }
   
@@ -112,9 +111,9 @@ margin-bottom: 71%;
 }  
 
 .track-information {
-  height: 26vh;
+  height: 36vh;
   @include generalAnimation();
-  transform: translateY(-231px);
+  transform: translateY(-38vh);
   background-color: $black;
 
 }
@@ -160,13 +159,13 @@ margin-bottom: 71%;
 }
 
 .fa-play {
-  @include positioningVolElem(30%, 34%);
+  @include positioningVolElem(27%, 36%);
   font-size: 120%;
   color: $black;
 }
 
 .fa-pause {
-  @include positioningVolElem(30%, 29%);
+  @include positioningVolElem(27%, 30%);
   font-size: 120%;
   color: $black;
 }
