@@ -697,7 +697,7 @@ footer .bottom-nav {
     margin-bottom: 72%;
   }
   .playingMediaHeight {
-    margin-bottom: 49%;
+    margin-bottom: 46%;
   }
   .track-info {
     font-size: 20rem;
@@ -718,10 +718,113 @@ footer .bottom-nav {
     font-size: 146%;
     top: 29%;
   }
+  .spinning-cover {
+    width: 66%;
+    margin-left: 17%;
+  }
   .bottom-section .text-container .bottom-text {
     font-size: 17rem;
   }
 }
 
 /*================================Tablet Devices=======================================*/
+@media (min-width: 768px) {
+  header {
+    height: 60vh;
+  }
+  header .title {
+    bottom: -8vh;
+    font-size: 46rem;
+  }
+  .music-showcase-section {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .music-showcase-section .music-menu {
+    margin: 7% 0;
+    font-size: 18rem;
+  }
+  .music-showcase-section .music-menu .music-genre .music-logos {
+    width: 48rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+  .music-showcase-section .openMediaHeight {
+    margin-bottom: 69%;
+  }
+  .music-showcase-section .playingMediaHeight {
+    margin-bottom: 66%;
+  }
+  .music-showcase-section .pausedMediaHeight {
+    margin-bottom: 91%;
+  }
+  .music-showcase-section .track-information {
+    height: 38vh;
+  }
+  .music-showcase-section .track-info {
+    font-size: 23rem;
+    margin-top: 0;
+    margin-bottom: 8%;
+    height: 23vh;
+  }
+  .music-showcase-section .track-controls {
+    bottom: 32%;
+    left: -4%;
+  }
+  .music-showcase-section .play-btn {
+    top: 39px;
+    width: 70px;
+    height: 70px;
+    right: 178px;
+  }
+  .music-showcase-section .fa-play {
+    font-size: 195%;
+    top: 29%;
+    left: 36%;
+  }
+  .music-showcase-section .fa-pause {
+    font-size: 184%;
+    top: 31%;
+  }
+  .music-showcase-section .track-seek-container {
+    position: relative;
+    right: 9%;
+  }
+  .music-showcase-section .volume-control {
+    position: relative;
+    top: 20px;
+    right: 1%;
+    width: 13%;
+  }
+  .music-showcase-section .fa-volume-up {
+    position: relative;
+    top: 17px;
+    left: -44px;
+    font-size: 28rem;
+  }
+  .music-showcase-section input[type="range"] {
+    -webkit-appearance: none;
+    width: 226%;
+  }
+  .music-showcase-section input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+  }
+  .music-showcase-section input[type="range"]::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+    margin-top: -9px;
+  }
+  .bottom-section .bottom-img {
+    width: 31%;
+    top: 1%;
+  }
+  .bottom-section .text-container {
+    position: relative;
+    bottom: 93%;
+    margin-left: 17%;
+  }
+  .bottom-section .text-container .bottom-text {
+    font-size: 25rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
