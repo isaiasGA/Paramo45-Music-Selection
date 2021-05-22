@@ -40,10 +40,6 @@
             font-size: 24rem;
             font-weight: 300;
 
-            li {
-              @include navBarAnimation;
-            }
-
             li:hover {
               transform: scale(1.2);
               @include hoverAnimation;
@@ -77,7 +73,7 @@
       }
     }
 
-    .music-genre {
+    .music-menu {
       @include loadUpAnimation(musicMenuAnimation);
 
       .music-logos {
@@ -86,7 +82,7 @@
 
       .music-logos:hover {
         transform: scale(1.2);
-        @include navBarAnimation;
+        @include hoverAnimation;
       } 
     }
   }

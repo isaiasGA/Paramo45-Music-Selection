@@ -23,6 +23,7 @@ import { trackComponents } from './trackComponents.js'
     const albumCover = document.querySelector(`.album-cover-${num}`);
     const trackInformation = document.querySelector(`.trackInfo-${num}`);
 
+    const musicBttns = document.querySelectorAll('.music-genre');
     const edmBtn = document.querySelector('.edm');
     const latinBtn = document.querySelector('.latin');
     const altBtn = document.querySelector('.alternative');
@@ -149,6 +150,21 @@ import { trackComponents } from './trackComponents.js'
         }
       });
     });
+
+    musicBttns.forEach(btn => {
+      window.requestAnimationFrame(() => {
+        btn.classList.add('clickBttns')
+      });
+    })
+
+    musicBttns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.remove('clickBttns');
+        window.requestAnimationFrame(() => {
+          btn.classList.add('clickBttns')
+        })
+      });
+    })
 
 
 

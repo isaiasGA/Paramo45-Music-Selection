@@ -9,14 +9,30 @@
     .music-genre {
       cursor: pointer;
       @include musicMenuFont;
+      @include generalAnimation;
+    }
+    .clickBttns {
+      @include onClickAnimantion(onclickBttn);
 
-      .music-logos {
-        width: 32rem; //%
-        margin: 0 auto;
-        padding-bottom: 5rem; //em
+      }
+
+      @keyframes onclickBttn {
+        0% {
+          transform: translateY(-23px);
+        }
+        100% {
+          transform: transitionY(0);
+        }
       }
     }
   }
+
+
+
+.music-logos {
+  width: 32rem; //%
+  margin: 0 auto;
+  padding-bottom: 5rem; //em
 }
 
 .trackContainer {
