@@ -99,9 +99,13 @@ img {
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+li {
+  cursor: pointer;
+}
+
 header {
   background-image: url("https://images.unsplash.com/photo-1445375011782-2384686778a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   height: 36vh;
@@ -140,6 +144,10 @@ header .top-header .menu-logo-container h2 {
   font-size: 12rem;
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
+}
+
+header .top-header .desktop-nav {
+  display: none;
 }
 
 header .top-header .menu-btn {
@@ -852,6 +860,153 @@ footer .bottom-nav {
   }
   .bottom-section .text-container .bottom-text {
     font-size: 25rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  header {
+    height: 83vh;
+    position: relative;
+    z-index: 2;
+  }
+  header .top-header {
+    background-color: #464646;
+    height: 9vh;
+  }
+  header .top-header .menu-logo-container {
+    margin-bottom: .5em;
+  }
+  header .top-header .menu-logo-container .earbuds-img {
+    width: 25rem;
+    margin-left: 15rem;
+    margin-top: 1rem;
+  }
+  header .top-header .menu-logo-container .logo-title {
+    font-size: 12rem;
+  }
+  header .top-header .menu-btn {
+    display: none;
+  }
+  header .top-header .desktop-nav-container {
+    width: 100%;
+  }
+  header .top-header .desktop-nav-container .desktop-nav {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 5vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    height: 8vh;
+    font-size: 24rem;
+    font-weight: 300;
+  }
+  header .top-header .desktop-nav-container .desktop-nav li {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  header .top-header .desktop-nav-container .desktop-nav li:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  @-webkit-keyframes titleAnimation {
+    0% {
+      -webkit-transform: translateX(-150%);
+              transform: translateX(-150%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes titleAnimation {
+    0% {
+      -webkit-transform: translateX(-150%);
+              transform: translateX(-150%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  .title {
+    bottom: 15%;
+    font-size: 66rem;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-name: titleAnimation;
+            animation-name: titleAnimation;
+  }
+  @-webkit-keyframes musicMenuAnimation {
+    0% {
+      -webkit-transform: translateY(-250%);
+              transform: translateY(-250%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes musicMenuAnimation {
+    0% {
+      -webkit-transform: translateY(-250%);
+              transform: translateY(-250%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  .music-genre {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-name: musicMenuAnimation;
+            animation-name: musicMenuAnimation;
+  }
+  .music-genre .music-logos {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  .music-genre .music-logos:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
   }
 }
 /*# sourceMappingURL=main.css.map */

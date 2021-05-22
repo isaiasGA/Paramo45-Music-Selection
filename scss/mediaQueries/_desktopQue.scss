@@ -1,0 +1,92 @@
+@media (min-width: 1366px) {
+  header {
+    height: 83vh;
+    position: relative;
+    z-index: 2;
+
+    .top-header {
+      background-color:$black;
+      height:  9vh;
+
+      .menu-logo-container {
+        margin-bottom: .5em;
+
+        .earbuds-img {
+          width: 25rem;
+          margin-left: 15rem;
+          margin-top: 1rem;
+          }
+
+          .logo-title {
+            font-size: 12rem;
+          }
+        } 
+
+        .menu-btn{
+          display: none;
+        }
+
+        .desktop-nav-container {
+          width: 100%;
+
+          .desktop-nav {
+            display: block;
+            display: flex;
+            justify-content: space-around;
+            height: 5vh;
+            align-items: center;
+            color: $white;
+            height: 8vh;
+            font-size: 24rem;
+            font-weight: 300;
+
+            li {
+              @include navBarAnimation;
+            }
+
+            li:hover {
+              transform: scale(1.2);
+              @include hoverAnimation;
+            }
+          }
+        }
+      }
+    } 
+
+    @keyframes titleAnimation {
+      0% {
+        transform: translateX(-150%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    .title {
+      bottom: 15%;
+      font-size: 66rem;
+
+     @include loadUpAnimation(titleAnimation);
+    }
+
+    @keyframes musicMenuAnimation {
+      0% {
+        transform: translateY(-250%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .music-genre {
+      @include loadUpAnimation(musicMenuAnimation);
+
+      .music-logos {
+        @include hoverAnimation;
+      }
+
+      .music-logos:hover {
+        transform: scale(1.2);
+        @include navBarAnimation;
+      } 
+    }
+  }
