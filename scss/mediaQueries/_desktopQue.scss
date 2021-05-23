@@ -10,15 +10,15 @@
 
       .menu-logo-container {
         margin-bottom: .5em;
+        padding: 9rem 9rem;
 
         .earbuds-img {
-          width: 25rem;
-          margin-left: 15rem;
-          margin-top: 1rem;
+          width: 46rem;
+          margin: 0;
           }
 
           .logo-title {
-            font-size: 12rem;
+           display: none;
           }
         } 
 
@@ -61,7 +61,7 @@
       bottom: 15%;
       font-size: 66rem;
 
-     @include loadUpAnimation(titleAnimation);
+     @include loadUpAnimation(titleAnimation, 0s);
     }
 
     @keyframes musicMenuAnimation {
@@ -74,7 +74,7 @@
     }
 
     .music-menu {
-      @include loadUpAnimation(musicMenuAnimation);
+      @include loadUpAnimation(musicMenuAnimation, 0.5s);
 
       .music-logos {
         @include hoverAnimation;

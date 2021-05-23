@@ -128,7 +128,7 @@ header .top-header .menu-logo-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 3px solid;
+  border: 3px solid #040404;
   margin-left: .5em;
   margin-top: .5em;
 }
@@ -332,8 +332,8 @@ header .title {
 }
 
 .music-showcase-section .music-menu .clickBttns {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
   transition: -webkit-transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
   transition: transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
@@ -348,23 +348,23 @@ header .title {
 
 @-webkit-keyframes onclickBttn {
   0% {
-    -webkit-transform: translateY(-23px);
-            transform: translateY(-23px);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   100% {
-    -webkit-transform: transitionY(0);
-            transform: transitionY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes onclickBttn {
   0% {
-    -webkit-transform: translateY(-23px);
-            transform: translateY(-23px);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   100% {
-    -webkit-transform: transitionY(0);
-            transform: transitionY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -918,14 +918,14 @@ footer .bottom-nav {
   }
   header .top-header .menu-logo-container {
     margin-bottom: .5em;
+    padding: 9rem 9rem;
   }
   header .top-header .menu-logo-container .earbuds-img {
-    width: 25rem;
-    margin-left: 15rem;
-    margin-top: 1rem;
+    width: 46rem;
+    margin: 0;
   }
   header .top-header .menu-logo-container .logo-title {
-    font-size: 12rem;
+    display: none;
   }
   header .top-header .menu-btn {
     display: none;
@@ -982,8 +982,8 @@ footer .bottom-nav {
   .title {
     bottom: 15%;
     font-size: 66rem;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
@@ -1014,14 +1014,14 @@ footer .bottom-nav {
     }
   }
   .music-menu {
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
     -webkit-animation-name: musicMenuAnimation;
             animation-name: musicMenuAnimation;
   }
