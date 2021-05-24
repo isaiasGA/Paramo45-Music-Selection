@@ -124,7 +124,10 @@ import { trackComponents } from './trackComponents.js'
           && ev.target.classList[0] !== `track-information`
           && ev.target.classList[1] !== `fa-play`
           && ev.target.classList[1] !== `fa-pause`
-          && ev.target.classList[0] !== `play-btn`) {
+          && ev.target.classList[0] !== `play-btn`
+          && ev.target.classList[0] !== `seekbar-${num}`
+          && ev.target.classList[0] !== `volume-input-${num}`
+        ) {
 
           albumCoverHide()
         }
