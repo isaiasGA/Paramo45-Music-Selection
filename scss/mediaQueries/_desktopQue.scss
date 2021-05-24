@@ -85,4 +85,94 @@
         @include hoverAnimation;
       } 
     }
+
+    .music-display {
+      display: flex;
+      flex-wrap: wrap;
+
+      .trackContainer {
+        width: 31%;
+        margin-right: 2%;
+        height: 27vh;
+
+        .album-cover {
+          height: 25vh;
+        } 
+
+        .spinning-cover {
+          height: 24vh;
+          width: 87%;
+        margin-left: 6%;
+        }
+      }
+      .openMediaHeight {
+        margin-bottom: 27%;
+       }
+        .track-information {
+          height: 22vh;
+          transform: translateY(-25vh);
+
+          .track-info {
+            font-size: 14rem;
+            height: 10vh;
+          }
+
+          .track-controls {
+            left: 0;
+            bottom: 23%;
+
+            .play-btn {
+              top: 19px;
+              width: 35px;
+              height: 35px;
+              right: 81px;
+
+              .fa-play {
+                font-size: 104%;
+                top: 29%;
+                left: 34%;
+              }
+
+              .fa-pause {
+                font-size: 104%;
+                top: 31%;
+              }
+            }
+
+            .volume-control {
+              position: relative;
+              top: 23px;
+              right: -7%;
+              width: 41%;
+            }
+        
+            .fa-volume-up {
+              top: 10px;
+              left: -25px;
+              font-size: 15rem;
+           }
+
+            .track-seek-container {
+              right: -6%;
+            }
+
+            input[type="range"] {
+              width: 104%;
+            }
+
+            input[type="range"]::-webkit-slider-runnable-track {
+              height: 3px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+              height: 15px;
+              width: 15px;
+              margin-top: -6px;
+            }
+          }
+      }
+      .animation-start {
+        transform:translateY(0);
+      }
+    }
   }

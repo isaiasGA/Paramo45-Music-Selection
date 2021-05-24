@@ -318,7 +318,7 @@ header .title {
           justify-content: space-between;
 }
 
-.music-showcase-section .music-menu .music-genre {
+.music-showcase-section .music-genre {
   cursor: pointer;
   font-family: 'Neuton', serif;
   font-weight: bold;
@@ -331,7 +331,7 @@ header .title {
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.music-showcase-section .music-menu .clickBttns {
+.music-showcase-section .clickBttns {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
@@ -1042,6 +1042,86 @@ footer .bottom-nav {
             transition-duration: 0.2s;
     -webkit-transition-timing-function: ease-in;
             transition-timing-function: ease-in;
+  }
+  .music-display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .music-display .trackContainer {
+    width: 31%;
+    margin-right: 2%;
+    height: 27vh;
+  }
+  .music-display .trackContainer .album-cover {
+    height: 25vh;
+  }
+  .music-display .trackContainer .spinning-cover {
+    height: 24vh;
+    width: 87%;
+    margin-left: 6%;
+  }
+  .music-display .openMediaHeight {
+    margin-bottom: 27%;
+  }
+  .music-display .track-information {
+    height: 22vh;
+    -webkit-transform: translateY(-25vh);
+            transform: translateY(-25vh);
+  }
+  .music-display .track-information .track-info {
+    font-size: 14rem;
+    height: 10vh;
+  }
+  .music-display .track-information .track-controls {
+    left: 0;
+    bottom: 23%;
+  }
+  .music-display .track-information .track-controls .play-btn {
+    top: 19px;
+    width: 35px;
+    height: 35px;
+    right: 81px;
+  }
+  .music-display .track-information .track-controls .play-btn .fa-play {
+    font-size: 104%;
+    top: 29%;
+    left: 34%;
+  }
+  .music-display .track-information .track-controls .play-btn .fa-pause {
+    font-size: 104%;
+    top: 31%;
+  }
+  .music-display .track-information .track-controls .volume-control {
+    position: relative;
+    top: 23px;
+    right: -7%;
+    width: 41%;
+  }
+  .music-display .track-information .track-controls .fa-volume-up {
+    top: 10px;
+    left: -25px;
+    font-size: 15rem;
+  }
+  .music-display .track-information .track-controls .track-seek-container {
+    right: -6%;
+  }
+  .music-display .track-information .track-controls input[type="range"] {
+    width: 104%;
+  }
+  .music-display .track-information .track-controls input[type="range"]::-webkit-slider-runnable-track {
+    height: 3px;
+  }
+  .music-display .track-information .track-controls input[type="range"]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    margin-top: -6px;
+  }
+  .music-display .animation-start {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=main.css.map */
