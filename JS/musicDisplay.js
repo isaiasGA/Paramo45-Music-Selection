@@ -31,6 +31,10 @@ import { trackComponents } from './trackComponents.js'
     const popBtn = document.querySelector('.pop');
     const allBtn = document.querySelector('.all');
 
+    const desktopMedia = window.matchMedia('(min-width: 1366px)');
+    const trackControls = document.querySelectorAll('.track-controls');
+    const volumeControls = document.querySelectorAll('.volume-control');
+
     const audioElementLogic = () => {
       audioElement.addEventListener('timeupdate', () => {
         let seconds = parseInt(audioElement.currentTime % 60);
@@ -46,6 +50,7 @@ import { trackComponents } from './trackComponents.js'
         trackContainerNum.classList.remove('playingMediaHeight');
         trackContainerNum.classList.add('pausedMediaHeight')
         audioElement.currentTime = 0;
+        trackInformation.classList.remove('deskViewTrackInfo');
       })
 
       audioElement.addEventListener('timeupdate', () => {
@@ -107,12 +112,21 @@ import { trackComponents } from './trackComponents.js'
           trackContainerNum.classList.remove('pausedMediaHeight');
           albumCover.classList.add('spinning-cover');
           albumCover.classList.remove('paused-album-cover');
+          if (desktopMedia.matches) {
+            trackInformation.classList.add('deskViewTrackInfo');
+            trackControls.forEach(control => control.style.bottom = '37%');
+            volumeControls.forEach(volume => volume.style.top = '10px');
+          }
         } else {
           audio.pause();
           trackContainerNum.classList.remove('playingMediaHeight');
           trackContainerNum.classList.add('pausedMediaHeight')
           albumCover.classList.remove('spinning-cover');
           albumCover.classList.add('paused-album-cover');
+          if (desktopMedia.matches) {
+            trackInformation.classList.remove('deskViewTrackInfo');
+            trackControls.forEach(control => control.style.bottom = '31%');
+          }
         };
       });
     };
@@ -142,6 +156,9 @@ import { trackComponents } from './trackComponents.js'
         playBtn.children[0].classList.add('fa-play');
         audioElement.pause();
         audioElement.currentTime = 0;
+        if (desktopMedia.matches) {
+          trackInformation.classList.remove('deskViewTrackInfo');
+        }
       }
     });
 

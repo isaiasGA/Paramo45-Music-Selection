@@ -536,6 +536,7 @@ header .title {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 4%;
+  text-align: center;
 }
 
 .track-controls {
@@ -921,7 +922,7 @@ footer .bottom-nav {
     padding: 9rem 9rem;
   }
   header .top-header .menu-logo-container .earbuds-img {
-    width: 46rem;
+    width: 33rem;
     margin: 0;
   }
   header .top-header .menu-logo-container .logo-title {
@@ -1050,34 +1051,51 @@ footer .bottom-nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .music-display .containerHide {
+    -webkit-transform: translateY(-198px);
+            transform: translateY(-198px);
+  }
   .music-display .trackContainer {
     width: 31%;
     margin-right: 2%;
-    height: 27vh;
+    height: 26.5vh;
   }
   .music-display .trackContainer .album-cover {
     height: 25vh;
   }
   .music-display .trackContainer .spinning-cover {
-    height: 24vh;
-    width: 87%;
-    margin-left: 6%;
+    height: 23vh;
+    width: 72%;
+    margin-left: 38px;
+    position: relative;
+    top: 2px;
+  }
+  .music-display .trackContainer .paused-album-cover {
+    width: 92%;
+    margin-left: 8%;
   }
   .music-display .openMediaHeight {
-    margin-bottom: 27%;
+    margin-bottom: 0;
+    margin-right: 35%;
+    -webkit-transition-duration: 2.5s;
+            transition-duration: 2.5s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
   .music-display .track-information {
-    height: 22vh;
+    height: 25vh;
     -webkit-transform: translateY(-25vh);
             transform: translateY(-25vh);
   }
   .music-display .track-information .track-info {
     font-size: 14rem;
-    height: 10vh;
+    height: 15vh;
   }
   .music-display .track-information .track-controls {
     left: 0;
-    bottom: 23%;
+    bottom: 31%;
   }
   .music-display .track-information .track-controls .play-btn {
     top: 19px;
@@ -1096,9 +1114,9 @@ footer .bottom-nav {
   }
   .music-display .track-information .track-controls .volume-control {
     position: relative;
-    top: 23px;
+    top: 15px;
     right: -7%;
-    width: 41%;
+    width: 31%;
   }
   .music-display .track-information .track-controls .fa-volume-up {
     top: 10px;
@@ -1120,8 +1138,30 @@ footer .bottom-nav {
     margin-top: -6px;
   }
   .music-display .animation-start {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(16.3vw, -25vh);
+            transform: translate(16.3vw, -25vh);
+    width: 116%;
+    -webkit-transition-duration: 2.5s;
+            transition-duration: 2.5s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .music-display .deskViewTrackInfo {
+    -webkit-transform: translate(14.8vw, -23vh);
+            transform: translate(14.8vw, -23vh);
+    height: 23vh;
+  }
+  .bottom-section .text-container {
+    position: relative;
+    bottom: 154%;
+    margin-left: 17%;
+  }
+  .bottom-section .bottom-img {
+    width: 26%;
+    top: -19%;
+    right: 4%;
   }
 }
 /*# sourceMappingURL=main.css.map */
