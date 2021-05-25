@@ -252,3 +252,45 @@
     }
   }
 }
+
+
+@media (min-width: 1920px) {
+  header {
+    .top-header {
+      .menu-logo-container {
+        margin-bottom: .5em;
+        padding: 17rem 9rem;
+      }
+    }
+  }
+
+  .music-display {
+    .animation-start {
+      transform: translate(10.6vw, -25vh);
+     }
+
+    .deskViewTrackInfo {
+      transform: translate(10.5vw, -23vh);
+    }
+
+    .trackContainer {
+      .spinning-cover {
+        width: 91%;
+       }
+
+       .paused-album-cover {
+        width: 100%;
+        padding-top: 11%;
+      }
+    }
+  }
+
+  .bottom-section {
+    .bottom-img {
+      width: 30.2%;
+    } 
+    .text-container {
+      bottom: 134%;
+    }
+  }
+}

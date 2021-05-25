@@ -1209,4 +1209,32 @@ footer .bottom-nav {
     bottom: 125%;
   }
 }
+
+@media (min-width: 1920px) {
+  header .top-header .menu-logo-container {
+    margin-bottom: .5em;
+    padding: 17rem 9rem;
+  }
+  .music-display .animation-start {
+    -webkit-transform: translate(10.6vw, -25vh);
+            transform: translate(10.6vw, -25vh);
+  }
+  .music-display .deskViewTrackInfo {
+    -webkit-transform: translate(10.5vw, -23vh);
+            transform: translate(10.5vw, -23vh);
+  }
+  .music-display .trackContainer .spinning-cover {
+    width: 91%;
+  }
+  .music-display .trackContainer .paused-album-cover {
+    width: 100%;
+    padding-top: 11%;
+  }
+  .bottom-section .bottom-img {
+    width: 30.2%;
+  }
+  .bottom-section .text-container {
+    bottom: 134%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
