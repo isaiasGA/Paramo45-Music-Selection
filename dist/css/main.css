@@ -1164,4 +1164,49 @@ footer .bottom-nav {
     right: 4%;
   }
 }
+
+@media (min-width: 1504px) {
+  .music-display .animation-start {
+    -webkit-transform: translate(13.5vw, -25vh);
+            transform: translate(13.5vw, -25vh);
+    -webkit-transition-duration: 2.5s;
+            transition-duration: 2.5s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .music-display .openMediaHeight {
+    margin-right: 35%;
+  }
+  .music-display .playingMediaHeight {
+    margin-top: 2%;
+  }
+  .music-display .deskViewTrackInfo {
+    -webkit-transform: translate(13.5vw, -23vh);
+            transform: translate(13.5vw, -23vh);
+    -webkit-transition-duration: 2.5s;
+            transition-duration: 2.5s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .music-display .trackContainer .spinning-cover {
+    width: 84%;
+    margin-left: 14px;
+  }
+  .music-display .trackContainer .paused-album-cover {
+    width: 114%;
+    margin-left: 0%;
+  }
+  .bottom-section .bottom-img {
+    width: 26%;
+    top: 3%;
+    right: -1%;
+  }
+  .bottom-section .text-container {
+    bottom: 125%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

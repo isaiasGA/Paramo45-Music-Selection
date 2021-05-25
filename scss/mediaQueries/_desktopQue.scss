@@ -208,3 +208,47 @@
       }
     }
   }
+
+@media (min-width: 1504px) {
+  .music-display {
+    .animation-start {
+      transform: translate(13.5vw, -25vh);
+      @include generalAnimation;
+    }
+    .openMediaHeight {
+      margin-right: 35%;
+  }
+
+  .playingMediaHeight {
+    margin-top: 2%;
+    }
+   .deskViewTrackInfo {
+    transform: translate(13.5vw, -23vh);
+    @include generalAnimation;
+    }
+
+    .trackContainer {
+      .spinning-cover {
+        width: 84%;
+        margin-left: 14px;
+      }
+
+      .paused-album-cover {
+        width: 114%;
+        margin-left: 0%;    
+      }
+    }
+  }
+
+  .bottom-section {
+    .bottom-img {
+      width: 26%;
+      top: 3%;
+      right: -1%;
+    }
+
+    .text-container {
+      bottom: 125%;
+    }
+  }
+}

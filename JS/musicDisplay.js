@@ -32,6 +32,8 @@ import { trackComponents } from './trackComponents.js'
     const allBtn = document.querySelector('.all');
 
     const desktopMedia = window.matchMedia('(min-width: 1366px)');
+    const desktopMediav2 = window.matchMedia('(min-width: 1504px)');
+    const desktopMediav3 = window.matchMedia('(min-width: 2000x)');
     const trackControls = document.querySelectorAll('.track-controls');
     const volumeControls = document.querySelectorAll('.volume-control');
 
@@ -117,6 +119,9 @@ import { trackComponents } from './trackComponents.js'
             trackControls.forEach(control => control.style.bottom = '37%');
             volumeControls.forEach(volume => volume.style.top = '10px');
           }
+          if (desktopMediav2.matches) {
+            trackControls.forEach(control => control.style.bottom = '26%');
+          }
         } else {
           audio.pause();
           trackContainerNum.classList.remove('playingMediaHeight');
@@ -126,6 +131,10 @@ import { trackComponents } from './trackComponents.js'
           if (desktopMedia.matches) {
             trackInformation.classList.remove('deskViewTrackInfo');
             trackControls.forEach(control => control.style.bottom = '31%');
+          }
+          if (desktopMediav2.matches) {
+            trackInformation.classList.remove('deskViewTrackInfo');
+            trackControls.forEach(control => control.style.bottom = '22%');
           }
         };
       });
