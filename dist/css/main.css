@@ -715,10 +715,7 @@ footer .bottom-nav {
 }
 
 .about-header {
-  background-image: url("https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
   height: 36vh;
 }
 
@@ -741,6 +738,91 @@ footer .bottom-nav {
   width: 56%;
   margin: 0% auto;
   border-radius: 5%;
+}
+
+.contact-header {
+  background-image: url("https://images.unsplash.com/photo-1578979807403-1bae8e564a14?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+  height: 42vh;
+}
+
+.social-container {
+  position: relative;
+  top: 17vh;
+  text-align: center;
+}
+
+.social-container .contact-text {
+  font-family: 'Cormorant', serif;
+  font-weight: 700;
+  font-size: 21rem;
+}
+
+.social-container .media-links {
+  background: lightgrey;
+  margin-top: 12%;
+  border: 5px solid;
+}
+
+.social-container .media-links .instagram, .social-container .media-links .twitter, .social-container .media-links .github, .social-container .media-links .linkedin {
+  margin-right: 6%;
+  font-size: 43rem;
+}
+
+.social-container .media-links .fa-instagram, .social-container .media-links .fa-twitter, .social-container .media-links .fa-github {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.social-container .media-links .fa-instagram:hover {
+  color: #8a3ab9;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.social-container .media-links .fa-twitter:hover {
+  color: #1DA1F2;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.social-container .media-links .fa-github:hover {
+  color: #211F1F;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.social-container .media-links .fa-linkedin:hover {
+  color: #2867B2;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 
 /*==================Mobile Devices============================*/
@@ -941,6 +1023,16 @@ footer .bottom-nav {
   .about-desc {
     font-size: 25rem;
     padding: 0 9%;
+  }
+  /*==================== Contact ==============================*/
+  .contact-header {
+    height: 66vh;
+  }
+  .social-container .contact-text {
+    font-size: 28rem;
+  }
+  .social-container .media-links {
+    margin-top: 6%;
   }
 }
 
@@ -1213,8 +1305,8 @@ footer .bottom-nav {
   }
   /*========================== About ========================================================*/
   .about-header {
-    background-position: center;
-    height: 98vh;
+    background-position: bottom;
+    height: 97vh;
   }
   .about-header .about-title {
     bottom: -47vh;
@@ -1222,6 +1314,10 @@ footer .bottom-nav {
   .about-desc {
     font-size: 31rem;
     padding: 0 12%;
+  }
+  /*Contact*/
+  .contact-header {
+    height: 76vh;
   }
 }
 
@@ -1267,6 +1363,10 @@ footer .bottom-nav {
   }
   .bottom-section .text-container {
     bottom: 125%;
+  }
+  /*Contact*/
+  .social-container {
+    top: 7vh;
   }
 }
 

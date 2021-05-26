@@ -219,8 +219,8 @@
     /*========================== About ========================================================*/
 
     .about-header {
-      background-position: center;
-      height: 98vh;
+      background-position: bottom;
+      height: 97vh;
 
       .about-title {
         bottom: -47vh;
@@ -230,6 +230,12 @@
     .about-desc {
       font-size: 31rem;
       padding: 0 12%;
+    }
+
+    /*Contact*/
+
+    .contact-header {
+      height: 76vh;
     }
   }
 
@@ -274,6 +280,12 @@
     .text-container {
       bottom: 125%;
     }
+  }
+
+  /*Contact*/
+
+  .social-container {
+    top: 7vh;   
   }
 }
 

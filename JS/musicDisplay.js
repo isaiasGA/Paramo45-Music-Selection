@@ -33,9 +33,9 @@ import { trackComponents } from './trackComponents.js'
 
     const desktopMedia = window.matchMedia('(min-width: 1366px)');
     const desktopMediav2 = window.matchMedia('(min-width: 1504px)');
-    const desktopMediav3 = window.matchMedia('(min-width: 2000x)');
     const trackControls = document.querySelectorAll('.track-controls');
     const volumeControls = document.querySelectorAll('.volume-control');
+
 
     const audioElementLogic = () => {
       audioElement.addEventListener('timeupdate', () => {
@@ -186,7 +186,7 @@ import { trackComponents } from './trackComponents.js'
       window.requestAnimationFrame(() => {
         btn.classList.add('clickBttns')
       });
-    })
+    });
 
     musicBttns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -195,9 +195,7 @@ import { trackComponents } from './trackComponents.js'
           btn.classList.add('clickBttns')
         })
       });
-    })
-
-
+    });
 
     btnLogic();
     audioElementLogic();
