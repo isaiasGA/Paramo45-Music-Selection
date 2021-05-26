@@ -26,7 +26,7 @@
           display: none;
         }
 
-        .desktop-nav-container {
+        .desktop-nav-container{
           width: 100%;
 
           .desktop-nav {
@@ -127,6 +127,7 @@
           .track-info {
             font-size: 14rem;
             height: 15vh;
+            margin-left: 6%;
           }
 
           .track-controls {
@@ -206,6 +207,29 @@
         top: -19%;
         right: 4%;
       }
+    }
+
+
+    .bottom-nav {
+      li:hover {
+        transform: scale(1.2);
+        @include hoverAnimation;
+      }
+    }
+    /*========================== About ========================================================*/
+
+    .about-header {
+      background-position: center;
+      height: 98vh;
+
+      .about-title {
+        bottom: -47vh;
+      }
+    }
+
+    .about-desc {
+      font-size: 31rem;
+      padding: 0 12%;
     }
   }
 

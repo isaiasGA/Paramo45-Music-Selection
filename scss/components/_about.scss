@@ -1,0 +1,25 @@
+.about-header {
+  background-image: url('https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 36vh;
+}
+
+.about-desc {
+  @include mainTitleFont(15rem, italic);  
+  text-align: center;
+  margin: 21% 0;
+}
+
+.about-img-container {
+  position: relative;
+  bottom: 6vh;
+
+  .about-music-img {
+    width: 56%;
+    margin: 0% auto;
+    border-radius: 5%;
+  }
+}
+

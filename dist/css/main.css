@@ -714,6 +714,35 @@ footer .bottom-nav {
   height: 100%;
 }
 
+.about-header {
+  background-image: url("https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 36vh;
+}
+
+.about-desc {
+  font-family: 'Cormorant', serif;
+  font-size: 15rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #040404;
+  text-align: center;
+  margin: 21% 0;
+}
+
+.about-img-container {
+  position: relative;
+  bottom: 6vh;
+}
+
+.about-img-container .about-music-img {
+  width: 56%;
+  margin: 0% auto;
+  border-radius: 5%;
+}
+
 /*==================Mobile Devices============================*/
 @media (min-width: 375px) {
   .title {
@@ -905,6 +934,14 @@ footer .bottom-nav {
   .bottom-section .text-container .bottom-text {
     font-size: 25rem;
   }
+  /*========================= About page =====================================*/
+  .about-header {
+    background-position: left;
+  }
+  .about-desc {
+    font-size: 25rem;
+    padding: 0 9%;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -1092,6 +1129,7 @@ footer .bottom-nav {
   .music-display .track-information .track-info {
     font-size: 14rem;
     height: 15vh;
+    margin-left: 6%;
   }
   .music-display .track-information .track-controls {
     left: 0;
@@ -1162,6 +1200,28 @@ footer .bottom-nav {
     width: 26%;
     top: -19%;
     right: 4%;
+  }
+  .bottom-nav li:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+  /*========================== About ========================================================*/
+  .about-header {
+    background-position: center;
+    height: 98vh;
+  }
+  .about-header .about-title {
+    bottom: -47vh;
+  }
+  .about-desc {
+    font-size: 31rem;
+    padding: 0 12%;
   }
 }
 
