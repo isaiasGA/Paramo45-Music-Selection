@@ -8,10 +8,11 @@ import { trackComponents } from './trackComponents.js'
   }));
   trackComponents(tracksArray);
 
-  /*====================================================================================*/
+  /*=========================== DOM Manipulation   =========================================================*/
 
 
   function trackDataLogic(num) {
+
     const trackContainer = document.querySelectorAll('.trackContainer')
     const trackContainerNum = document.querySelector(`.container-${num}`)
     const audioElement = document.querySelector(`.audio-${num} `);
@@ -36,6 +37,8 @@ import { trackComponents } from './trackComponents.js'
     const trackControls = document.querySelectorAll('.track-controls');
     const volumeControls = document.querySelectorAll('.volume-control');
 
+
+    /*  Audio Seek bar & Volume controls set up */
 
     const audioElementLogic = () => {
       audioElement.addEventListener('timeupdate', () => {
@@ -77,6 +80,9 @@ import { trackComponents } from './trackComponents.js'
         audioElement.volume = volumeInput.value / 100;
       });
     };
+
+
+    /* Media animations */
 
     const albumCoverHide = () => {
       trackContainerNum.classList.remove('openMediaHeight');
