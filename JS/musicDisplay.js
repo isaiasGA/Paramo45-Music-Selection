@@ -1,3 +1,4 @@
+
 import { tracksData } from './spotifyDataReq.js'
 import { trackComponents } from './trackComponents.js'
 
@@ -84,19 +85,6 @@ import { trackComponents } from './trackComponents.js'
 
     /* Media animations */
 
-    const albumCoverHide = () => {
-      trackContainerNum.classList.remove('openMediaHeight');
-      trackContainerNum.classList.remove('playingMediaHeight')
-      trackInformation.classList.remove('animation-start');
-      trackContainerNum.classList.remove('pausedMediaHeight');
-      albumCover.classList.remove('spinning-cover');
-      albumCover.classList.remove('paused-album-cover');
-      playBtn.children[0].classList.remove('fa-pause');
-      playBtn.children[0].classList.add('fa-play');
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    }
-
     function trackGenresLogic(btn, gen) {
       btn.addEventListener('click', () => {
         trackContainer.forEach(genre => {
@@ -145,6 +133,22 @@ import { trackComponents } from './trackComponents.js'
         };
       });
     };
+
+    const albumCoverHide = () => {
+      trackContainerNum.classList.remove('openMediaHeight');
+      trackContainerNum.classList.remove('playingMediaHeight')
+      trackInformation.classList.remove('animation-start');
+      trackContainerNum.classList.remove('pausedMediaHeight');
+      albumCover.classList.remove('spinning-cover');
+      albumCover.classList.remove('paused-album-cover');
+      playBtn.children[0].classList.remove('fa-pause');
+      playBtn.children[0].classList.add('fa-play');
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      if (desktopMedia.matches) {
+        trackInformation.classList.remove('deskViewTrackInfo');
+      }
+    }
 
     document.body.addEventListener('click', (ev) => {
       if (ev.target.classList[1] !== `album-cover-${num}`) {
